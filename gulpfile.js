@@ -8,7 +8,6 @@ const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer').default;
 const clean = require('gulp-clean');
 const avif = require('gulp-avif');
-const ttf2woff2 = require('gulp-ttf2woff2');
 const include = require('gulp-include');
 const newer = require('gulp-newer');
 const replace = require('gulp-replace');
@@ -24,7 +23,6 @@ const path = {
   html: appPath + '/**/*.html',
 
   fonts: appPath + '/fonts',
-  fontsFiles: appPath + '/fonts/src/*.ttf',
 
   images: appPath + '/images',
   imagesSrc: appPath + '/images/src',
@@ -67,13 +65,6 @@ function pages() {
     )
     .pipe(dest('app'))
     .pipe(browserSync.stream());
-}
-
-function fonts() {
-  return src(path.fontsFiles, { encoding: false })
-    .pipe(newer({ dest: path.fonts, ext: '.woff2' }))
-    .pipe(ttf2woff2())
-    .pipe(dest(path.fonts));
 }
 
 function images() {
@@ -237,7 +228,6 @@ function buildingAssets() {
   return src(assetGlob, { base: appPath, allowEmpty: true, encoding: false }).pipe(dest(distPath));
 }
 
-exports.fonts = fonts;
 exports.pages = pages;
 exports.styles = styles;
 exports.libsStyles = libsStyles;
