@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TESERA</title>
+
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="fonts/WorkSans-Bold.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/WorkSans-Medium.woff2" as="font" type="font/woff2" crossorigin />
+
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="stylesheet" href="css/libs.min.css" />
+  <link rel="stylesheet" href="css/style.min.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <!-- Preload critical images -->
+  <link rel="preload" href="../images/logo4.png" as="image" type="image/avif">
+  <link rel="preload" href="../images/question-icon.svg" as="image" type="image/svg+xml">
+  <!-- Preload critical scene 1 images -->
+  <link rel="preload" href="../images/scene_1/part-1.avif" as="image" type="image/avif" media="(min-width: 769px)">
+  <link rel="preload" href="../images/scene_1/part-2.avif" as="image" type="image/avif" media="(min-width: 769px)">
+  <link rel="preload" href="../images/scene_1/part-3.avif" as="image" type="image/avif" media="(min-width: 769px)">
+
+  <!-- Preload scene transition images -->
+  <link rel="preload" href="../images/scene_transition/clouds_back.avif" as="image" type="image/avif"
+    media="(min-width: 769px)">
+  <link rel="preload" href="../images/scene_transition/clouds_back_mobile.avif" as="image" type="image/avif"
+    media="(max-width: 768px)">
+  <link rel="preload" href="../images/scene_transition/clouds_front.avif" as="image" type="image/avif"
+    media="(min-width: 769px)">
+  <link rel="preload" href="../images/scene_transition/clouds_front_mobile.avif" as="image" type="image/avif"
+    media="(max-width: 768px)">
+  <!-- Preload critical scene 2 images -->
+  <link rel="preload" href="../images/scene_2/test-part-1.avif" as="image" type="image/avif" media="(min-width: 769px)">
+  <link rel="preload" href="../images/scene_2/test-part-2.avif" as="image" type="image/avif" media="(min-width: 769px)">
+  <link rel="preload" href="../images/scene_2/test-part-3.avif" as="image" type="image/avif" media="(min-width: 769px)">
+  <link rel="preload" href="../images/scene_2/test-part-4.avif" as="image" type="image/avif" media="(min-width: 769px)">
+  <!-- Preload scene 2, 3, 4 images for better performance -->
+  <link rel="preload" href="../images/scene_2/main-island_mobile.avif" as="image" type="image/avif"
+    media="(max-width: 768px)">
+  <link rel="preload" href="../images/scene_3/3_plan_mobile.avif" as="image" type="image/avif"
+    media="(max-width: 768px)">
+  <link rel="preload" href="../images/scene_4/2_plan_mobile.avif" as="image" type="image/avif"
+    media="(max-width: 768px)">
+</head>
+
+<body>
+  <!-- =include cookie-popup.html -->
+  <!-- =include header.html -->
+  <div class="fixed-panels">
+    <div class="steps">
+      <div class="step n1">
+        <div class="inner">
+          <div class="gradient"></div>
+          <div class="bg"></div>
+          <div class="num">1</div>
+        </div>
+      </div>
+      <div class="step n2">
+        <div class="inner">
+          <div class="gradient"></div>
+          <div class="bg"></div>
+          <div class="num">2</div>
+        </div>
+      </div>
+      <div class="step n3">
+        <div class="inner">
+          <div class="gradient"></div>
+          <div class="bg"></div>
+          <div class="num">3</div>
+        </div>
+      </div>
+      <div class="step n4">
+        <div class="inner">
+          <div class="gradient"></div>
+          <div class="bg"></div>
+          <div class="num">4</div>
+        </div>
+      </div>
+    </div>
+    <div class="levels">
+      <div class="image">
+        <img class="tier-image tier-1" src="../images/icons/tier-4-1.avif" alt="sword">
+        <img class="tier-image tier-2" src="../images/icons/tier-1-2.avif" alt="sword">
+        <img class="tier-image tier-3" src="../images/icons/tier-3.avif" alt="sword">
+        <img class="tier-image tier-4" src="../images/icons/tier-4-2.avif" alt="sword">
+      </div>
+      <div class="text">
+        <span class="tier-level">4</span>
+        <span class="tier-suffix">tier</span>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div class="main-container desktop">
+      <section class="scene hero-scene">
+        <div class="hero">
+          <div class="logo">
+            <img src="../images/logo4.png" alt="logo" fetchpriority="high">
+          </div>
+
+          <h1 class="title"><span class="white-text">Tesera is an</span> endless world. Your way to live in it</h1>
+          <div class="subtitle">with an endless procedurally generated world and a wide variety of biomes</div>
+          <div class="btns">
+            <a href="#" class="btn white">
+              <span>Watch video</span>
+              <img class="icon" src="../images/play-video-icon.svg" alt="">
+            </a>
+            <a href="#" class="btn yellow">Join A PLAYTEST</a>
+          </div>
+        </div>
+        <div class="parallax-layer clouds-front">
+          <img src="../images/scene_1/front-big-clouds.avif" alt="">
+        </div>
+      </section>
+
+      <section class="scene scene-1">
+        <div class="level-label level-1">
+          <div class="name">SKYLANDS</div>
+          <div class="description">A scattered realm of mysteriously floating islands connected by
+            fading
+            energy platforms and filled with ancient ruins of
+            an unknown civilization. Currently considered end-game content.</div>
+        </div>
+        <div class="parallax-layer clouds-back">
+          <img src="../images/scene_1/clouds_step1.avif" alt="">
+        </div>
+        <div class="parallax-layer islands-back-1">
+          <img src="../images/scene_1/bg-island-2nd-plan.avif" alt="">
+        </div>
+        <div class="parallax-layer islands-back-2">
+          <img src="../images/scene_1/bg-island-3rd-plan.avif" alt="">
+        </div>
+        <div class="main-layer">
+          <img src="../images/scene_1/part-1.avif" alt="" loading="eager" fetchpriority="high">
+          <img src="../images/scene_1/part-2.avif" alt="" loading="eager" fetchpriority="high">
+          <img src="../images/scene_1/part-3.avif" alt="" loading="eager" fetchpriority="high">
+          <div class="scene-svg">
+            <svg viewBox="0 0 1440 484" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path data-target-id="1" class="char-item"
+                d="M384.781 104.826L388.662 113.142H399.102V116.469L401.412 118.594L403.814 114.251H405.385L404.369 119.888L407.048 121.458L410.19 115.545L409.266 122.752H413.609L416.288 115.545V122.752H420.077L422.294 113.142L428.485 111.11L431.442 99.8369L433.752 98.1737L430.056 88.8413L427.007 87.7325L421.185 77.8458L420.077 79.2318L422.294 85.9769L414.163 87.7325L416.288 84.8681L409.266 75.4434L407.603 77.8458L412.5 87.7325L407.048 89.6729L404.369 83.2973L402.983 83.7593V89.6729L399.102 84.8681L396.7 85.9769L399.102 92.0753L397.624 93.2765C394.359 92.3525 387.127 90.1719 384.318 88.8413C383.283 90.3197 384.195 95.6789 384.781 98.1737L390.416 100.576L391.248 104.18L384.781 104.826Z"
+                stroke="#FFAA00" stroke-width="2" mask="url(#path-1-outside-1_8027_77004)" />
+              <path data-target-id="2" class="char-item"
+                d="M568.038 147.708L569.206 148.878H571.664L577.979 137.769L581.838 132.273L586.749 144.2L592.479 148.878L593.297 143.382L589.906 132.975V128.648L585.346 125.725L586.749 122.217L584.644 119.41L586.749 102.221L588.269 97.0758L585.346 93.6847L588.269 88.0721L583.592 81.1727L587.684 71.701L601.483 76.0276L602.769 73.689L612.007 76.0276L618.555 75.326L616.333 72.4026L612.007 71.701L608.148 70.0639L618.555 65.9712L605.575 61.4108L604.523 64.4512H586.749L581.838 53.4592V39.8948H574.937L574.237 34.2821L566.519 22.3547L565.581 31.3587L567.335 34.2821H555.761L560.906 43.7538L556.694 46.2094L562.774 52.7577L560.906 60.0076L560.321 64.4512L554.826 63.2816L551.785 64.4512H497.176V68.1933H552.486L550.382 73.689L551.785 85.0317L553.304 89.0074L556.694 87.0196L564.179 79.8866L567.335 83.0439L565.581 85.0317L564.179 88.0721L562.774 90.8784L565.581 94.9711V100.818L560.321 105.846L564.179 109.705L575.756 125.725L574.937 128.648H572.715L569.206 140.225V143.382L568.038 147.708Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8027_77004)" />
+              <path data-target-id="3" class="char-item"
+                d="M686.942 79.3641L688.892 82.0926C690.971 81.7462 697.103 80.9235 705.003 80.4038C706.25 84.6654 712.019 85.2977 714.747 85.0812L718.126 79.3641C719.425 79.7107 723.375 80.7416 728.78 82.0926C734.185 83.4436 735.363 75.2931 735.276 71.049H737.485L738.784 78.4549L741.642 82.8724L750.867 82.0926V78.4549L748.918 76.8958L746.58 66.1118V60.6549L745.28 57.4067V40.646C745.714 39.4334 746.71 36.8522 747.229 36.2287C747.749 35.6051 747.013 33.0236 746.58 31.8108L743.332 26.7439L738.784 23.2358L733.327 20.5072L726.571 21.6765L724.362 24.405L721.114 31.8108L712.539 36.2287V40.646L716.437 44.5438L718.126 53.1189V65.4621H714.747L710.85 71.049L691.231 70.2694H686.942V79.3641Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8027_77004)" />
+              <path data-target-id="4" class="char-item"
+                d="M833.057 52.5726L837.415 66.1118L846.441 69.224L851.732 66.1118L867.138 70.0021V74.9819H875.386V70.7802L886.124 68.2902H903.865L904.799 61.4429H891.882L899.819 54.2843L902.931 36.2287L892.971 34.9872V32.6529L902.931 30.4742V24.5606L898.574 21.9152L903.865 18.6472L899.819 5.26356L892.971 3.24048L881.3 9.93237L869.628 18.6472L864.648 16.7797L860.447 21.9152L861.536 23.627L859.357 28.1401H855.155L849.086 38.8779L833.057 52.5726Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8027_77004)" />
+              <path data-target-id="5" class="char-item"
+                d="M1121.42 216.143L1117.26 264.854L1156.6 278.177L1190.33 267.352L1195.74 218.433L1156.6 204.693L1121.42 216.143Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8027_77004)" />
+              <path data-target-id="6" class="char-item"
+                d="M710 419.866L707 421.866H712.5L716.5 427.366L717.5 459.366L723 461.866L722.5 470.366L741.5 480.366L789 463.366L766.5 445.366V436.366L764 435.866V428.866L731.5 413.366H729L722.5 409.366L716 418.866L710 419.866Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8027_77004)" />
+            </svg>
+
+            <div class="infos" id="scene-1-infos">
+              <div class="info" data-target-id="1">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Skyshrim Scout</div>
+                    <div class="t2">A shrimp-like flying drone of the Skylands, designed for
+                      long-range support and reconnaissance. It alerts nearby allies
+                      upon detecting intruders and can strike with a precise laser beam, combining agility with deadly
+                      efficiency.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="2">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Celestial Sentinel</div>
+                    <div class="t2">A graceful ancient sentinel who has watched over the Skylands
+                      long before humans arrived. Her movements are elegant yet
+                      lethal, and she wields her spear with unmatched mastery-striking with precision both in close
+                      combat and from afar.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="3">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t2">A player boldly meeting their demise at the spear of a
+                      Celestial Sentinel.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="4">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Laser Turret</div>
+                    <div class="tier">Tier: 3</div>
+                    <div class="t2">A high-power laser railgun turret designed for heavy defense.
+                      It delivers devastating damage but operates extremely
+                      slowly, requiring a rare Energy Core to charge each individual shot.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="5">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup left">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Quorite Ruins</div>
+                    <div class="t2">Ancient ruins left behind by an unknown civilization. These
+                      structures are primarily built from quartz and bound
+                      together by enigmatic force fields.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="6">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Halonite Ore</div>
+                    <div class="tier">Tier 4</div>
+                    <div class="t2">Halonite is a rare, previously unknown refractory metal
+                      found
+                      only in the flying islands of the Skylands. It features a
+                      complex internal structure and unusual properties that defy full understanding. Its origins
+                      remain
+                      a mystery, shrouded
+                      in speculation and legend.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene scene-transition">
+        <div class="parallax-layer clouds-back">
+          <img src="../images/scene_transition/clouds_back.avif" alt="" loading="eager" fetchpriority="high">
+        </div>
+        <div class="parallax-layer clouds-front">
+          <img src="../images/scene_transition/clouds_front.avif" alt="" loading="eager" fetchpriority="high">
+        </div>
+      </section>
+
+      <section class="scene scene-2">
+        <div class="level-label level-2">
+          <div class="name">Overworld</div>
+          <div class="description">The starting layer where players will spend most of their time,
+            filled
+            with a wide range of activities: from peaceful
+            exploration to deadly encounters.</div>
+        </div>
+        <div class="parallax-layer islands-back-2">
+          <img src="../images/scene_2/bg-island-3rd-plan.avif" alt="">
+        </div>
+        <div class="main-layer">
+          <img src="../images/scene_2/test-part-1.avif" alt="" loading="eager" fetchpriority="high">
+          <img src="../images/scene_2/test-part-2.avif" alt="" loading="eager">
+          <img src="../images/scene_2/test-part-3.avif" alt="" loading="eager">
+          <img src="../images/scene_2/test-part-4.avif" alt="" loading="eager">
+          <div class="scene-svg">
+            <svg viewBox="0 0 1440 1517" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="char-item" data-target-id="1"
+                d="M148 283.072V297.352L151.384 300.799L156.654 306.09L167.647 310.43L171.958 316.67L178.619 321.569L186.653 330.386V338.021H201.936L208.794 339.987L220.29 338.021L218.37 313.462L234.237 310.43V294.26L244.95 292.643L244.141 279.302V248.376H249.397L254.652 246.557H258.088V242.413L261.828 240.19L260.716 236.451L262.939 234.317V231.768L270.115 235.339L272.44 233.318L277.291 229.477L280.424 226.647L282.748 224.727L280.424 221.291L283.86 218.259L279.211 216.44V212.094H277.291L271.53 211.083L274.158 206.838H266.174L266.78 203.407H263.647L261.828 199.764L256.977 195.418L254.046 194.003L250.407 196.429L249.397 199.764L245.859 198.349V193.195L248.184 186.322V159.54L256.977 155.194L256.37 147.21L260.716 145.896L259.806 143.774L264.557 141.651H268.599L270.823 138.215H273.551L274.865 135.789L277.291 134.88L276.179 131.14L277.291 127.603L275.472 123.864L272.743 121.539L271.53 118.103L268.599 116.385L264.557 115.172L260.716 112.747L258.998 113.959L258.392 106.784V101.629L263.95 99.608L272.743 98.5974L273.551 92.4324L275.472 90.8156L287.094 90.31L290.935 84.4485L294.573 79.7992L296.594 76.2616H302.658L306.195 75.2516L307.206 71.714H314.786L321.76 63.4264L324.185 59.4851L326.611 57.5648V55.2403L323.579 51.9052L326.611 49.7826V46.2455L321.76 47.2565L324.994 44.3249L321.76 42.5061L317.616 39.5752L317.212 35.0271L311.047 34.3198V31.4899L305.589 27.8516L303.062 27.245L301.243 24.011L297.302 24.8196L294.573 23.4047L289.115 24.011L288.004 20.3727L291.844 14.915H286.488L284.567 11.0747H283.153L280.828 8.44738L278.706 10.5694H273.551L266.881 9.96301L263.95 7.43649L258.796 8.44738L253.439 9.15449L251.317 6.42572L250.609 8.44738L248.588 7.43649L240.099 8.44738L238.684 6.42572H233.327L228.981 8.44738H225.747L222.616 5.41504L221.907 7.43649L219.38 8.44738V12.8939L214.428 14.915L211.699 17.5427L208.465 14.915L206.848 17.5427H204.928L202.401 16.7342L201.189 21.5857H199.47L198.359 24.011L202.401 27.245V28.6599H197.752L195.832 29.7723L194.013 32.0962L191.688 33.41V35.0271L187.646 36.745L187.14 37.8571L187.646 40.5859L184.816 39.5752L182.087 41.0909L184.816 44.3249H183.3L181.582 47.2565H179.662V49.7826L177.842 50.9959L176.731 52.8148H174.608L172.991 55.7452H170.262L169.05 58.272H167.129V63.4264L171.576 67.7723V70.0965L172.385 73.5328H176.731L177.842 76.2616L183.3 75.2516L184.007 78.5861L187.646 76.2616H194.013L196.641 75.2516L199.47 77.3734L202.401 79.1931L207.32 83.4378L210.385 84.4485L209.577 88.1878L215.924 90.8156L216.652 93.4426L218.473 95.1608L220.704 96.3375L222.616 100.481L218.473 105.26L222.616 109.403L218.473 110.996V119.918L215.924 123.105V136.808H208.914L207.32 142.543L205.09 150.191H198.398L192.343 154.014L190.113 156.564V167.718L182.146 169.629L179.916 173.134L176.092 178.87L171.949 183.65V203.407L176.092 209.143V231.768L173.861 234.317V243.877H169.719V249.932H158.565V261.404H156.654L158.565 279.885L148 283.072Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8030_2470)" />
+              <path class="char-item" data-target-id="2"
+                d="M597.927 287.263L597.057 291.471V297.421L605.182 300.468L624.771 297.421L638.121 275.655L645.811 277.977L673.091 342.983L681.506 345.595L848.23 317.59L849.391 316.139L845.328 308.594V306.127L840.684 298.727V295.97L836.912 289.15V286.973L832.704 280.009V277.252L828.496 270.577V267.094L825.449 261.871V258.823L820.225 251.568V248.956L816.162 241.992V239.089L810.793 230.674L786.416 219.5L625.642 243.152L620.128 248.521V252.729L617.226 254.18L616.471 258.371L613.018 259.984V263.64L610.406 264.627L609.934 268.309L607.599 268.91L606.866 273.512L603.864 275.313L603.441 279.283L600.684 281.604L599.814 285.812L597.927 287.263Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8030_2470)" />
+              <path class="char-item" data-target-id="3"
+                d="M875.5 198.415L830.801 254.965L828.5 257.709V260.415L831.527 266.348V269.785L835.689 276.407V279.182L840 285.915V288.515L843.729 295.231V297.911L848.498 305.476V308.278L852.85 316.683L849.75 320.2L834.311 322.942L821.5 337.915L831 342.915L870.5 332.415L874 338.415L860.5 341.915V349.415L868 353.415L883.5 349.415L891.5 354.415L907.5 351.915V358.915L912 361.915L920.5 360.915V355.915L929 354.415L938.5 358.915L953 355.915L962.5 360.915L989 355.915L998.5 360.915L1012.5 357.415L1023.5 361.915L1035.5 359.915L1048.5 357.415L1033.5 323.915L1042.5 321.915L1047.5 324.915V328.915L1051 330.415L1059 328.915L1087.5 341.415L1107.5 330.415L1100 315.915L1121.5 323.915L1122.5 309.915L1112 297.915V292.415L1118 294.415L1130.5 291.415L1127 287.415H1134L1121.5 273.915V255.415L1127 248.415V240.415L1134 233.415L1136 202.915L1124 204.415L1110.5 218.915V207.415L1102 202.915L1088.5 204.415L1087.5 236.415L1056.5 199.915L1053 197.915L1041.5 190.915L1040 187.915L1033.5 185.915V183.915L1023.5 165.415L1011.5 166.915V176.915L1002 176.415L990.5 173.915L968 176.415L966.5 177.415L961 175.915L923 181.915L920 187.915L896 199.915L887 196.915L875.5 198.415Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8030_2470)" />
+              <path class="char-item" data-target-id="4"
+                d="M727.67 560.44L737.018 567.562L740.356 566.561V562.888L742.805 559.884L744.474 557.992L737.908 551.204L740.356 548.755L744.474 550.425L748.146 553.429L746.699 559.216L748.146 564.001L758.384 562.332L757.716 554.653L758.384 551.204L757.049 549.757V544.082L753.488 539.63L754.378 536.292L746.699 530.616L740.356 530.02L739.442 537.665L742.805 540.966L737.908 543.414H733.346L731.454 540.966H727.114V534.066L726.224 532.508L715.541 526.61L713.426 528.613V540.966L706.86 543.414L708.641 546.752V556.99L715.541 562.332V557.992L721.216 553.985L727.67 557.992V560.44Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8030_2470)" />
+              <path class="char-item" data-target-id="5"
+                d="M579.035 652.153L583.604 654.086L585.01 651.099H590.808V633.702L592.565 630.188V620.523L590.062 619.196L589.578 613.495L585.01 609.452L576.048 612.439L576.647 621.089L575.255 622.87L576.647 627.991V632.333L579.035 633.702V652.153Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8030_2470)" />
+              <path class="char-item" data-target-id="6"
+                d="M358.223 685.087L354.858 688.322V690.004L358.223 691.169L370.129 688.969L377.118 685.992L370.129 684.31V680.169L375.177 677.71L382.294 676.804L377.894 673.957L383.071 672.922L389.412 670.463L383.977 669.686L393.942 666.321L386.824 664.898L393.165 661.533L395.495 658.039L390.318 657.392L393.942 655.062L393.165 652.992L382.294 656.356L375.177 655.062L372.588 651.439L377.118 646.262L374.53 640.568V635.909L372.588 630.474L361.459 632.285L360.294 640.568V645.227H354.858L355.894 642.25H350.976L352.27 637.721L341.011 645.227L336.481 649.238V655.062L339.199 656.356L344.764 654.156L345.929 666.321L348.258 671.757L354.858 675.898L360.294 677.71L363.659 679.004V685.087H358.223Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8030_2470)" />
+              <path class="char-item" data-target-id="7"
+                d="M1012.54 838.793V841.833L1019.32 842.885L1024.35 849.551L1045.05 847.212V844.873L1041.42 838.793H1045.05L1041.42 833.998L1038.27 835.168L1032.77 830.022L1013.48 832.595V835.168L1015.7 838.091L1012.54 838.793Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8030_2470)" />
+              <path class="char-item" data-target-id="8"
+                d="M1148.54 867.09L1146.9 870.481L1149.47 871.417H1154.62V864.05L1156.25 862.063V873.99L1154.62 878.083L1158.24 879.486L1160.35 878.901L1161.63 862.063L1162.57 859.373L1163.74 857.502L1162.57 855.748L1165.02 852.357L1166.19 847.913L1165.02 843.587L1167.24 842.768L1169 840.43V837.857H1169.82V836.22L1169 833.063L1158.24 830.139L1155.43 831.543V836.22L1154.62 839.845L1153.8 842.768L1149.47 841.95L1142.57 816.224L1140.82 818.329L1146.9 842.768H1144.44L1145.26 846.159L1148.54 848.849H1153.21L1152.39 853.877V857.502L1148.54 860.659V867.09Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8030_2470)" />
+              <path class="char-item" data-target-id="9"
+                d="M741.128 954.147V959.342H743.544L743.846 955.114H748.145L748.661 958.955H750.733V954.147L751.216 952.516L750.733 947.079L752.907 942.428L753.525 939.373L752.907 938.439L750.733 939.951L749.273 936.025H745.9L743.788 936.128L740.351 936.442L739.074 941.112L739.074 947.804L739.61 953.061L741.128 954.147Z"
+                stroke="#FFAA00" stroke-width="2" mask="url(#path-1-outside-1_8030_2470)" />
+              <path class="char-item" data-target-id="10"
+                d="M74.6394 1047.56L73.3377 1062.96L78.3274 1066L83.7508 1070.12L86.354 1079.02H90.2589L92.6452 1070.12L97.2009 1068.39L99.5872 1079.02L103.492 1077.28L105.228 1059.93L114.339 1051.68L117.159 1059.93L119.762 1056.67V1024.35L114.339 1021.96L95.8993 1019.14L87.8726 1030.21L80.9306 1034.33L76.5919 1040.4L73.3377 1035.85L72.2529 1044.09L74.6394 1047.56Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8030_2470)" />
+              <path class="char-item" data-target-id="11"
+                d="M471.425 1353.58L472.007 1365.21L475.45 1366.44L478.973 1369.03L484.508 1370.3L487.113 1369.03L493.51 1361.52V1349.95L493.043 1345.64L493.938 1341.95L493.043 1335.9L492.277 1330.77L491.001 1330.4L490.022 1332.44L488.571 1331.88L488.077 1333.12L490.022 1336.45V1340.94L484.508 1339.83L483.166 1336.87H482.271L481.742 1339.48H479.28L472.007 1347.43V1351.74L471.425 1353.58Z"
+                stroke="#FFAA00" stroke-width="2" mask="url(#path-1-outside-1_8030_2470)" />
+              <path class="char-item" data-target-id="12"
+                d="M785.469 1200.07V1206.79L801.659 1211.84L805.014 1206.79L811.893 1207.65L814.796 1201.63L814.258 1199.15L816.408 1198.52L825.223 1181.31L823.933 1178.51L829.308 1168.73L832.533 1161.31L835.005 1159.7L840.595 1164.75L848.335 1158.41L841.563 1150.24L842.423 1147.77L845.218 1146.16L878.434 1151.85L879.724 1146.16L846.507 1137.56V1124.12L843.605 1121.11L852.635 1107.14L850.055 1106.06L841.563 1119.28L830.92 1115.74L833.178 1109.07L830.92 1108.1L827.91 1115.74H823.933L818.558 1119.28L820.386 1104.88V1098.86L819.096 1097.57L816.408 1096.28L815.437 1112.75L809.065 1125.67L785.469 1117.75L781.508 1121.88L805.448 1133.42L807.17 1139.1L801.659 1151.85L796.664 1157.01H793.736L790.636 1167.35L781.508 1182.16L780.302 1187.33L781.508 1198.52L785.469 1200.07Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8030_2470)" />
+              <path class="char-item" data-target-id="13"
+                d="M100.742 1366.29L105.094 1379.85L108.204 1381.75L111.319 1379.85L110.777 1375.93L111.86 1370.51L114.839 1372.27L115.589 1376.74L119.172 1383.11V1390.96L121.88 1394.89L126.754 1393.94L127.567 1384.05L133.118 1381.75L136.503 1387.84L140.7 1386.36L139.617 1380.8L144.762 1376.74L143.679 1368.89L150.043 1366.29L144.762 1361.58L143.679 1356.7L150.855 1352.64V1347.63L155.053 1353V1356.17H158.438L162.5 1353.32L163.718 1348.85L158.438 1333.78L157.219 1328.67L155.053 1320.14L150.043 1316.9L150.855 1312.7L146.523 1309.58L148.418 1303.35L146.523 1302.14L140.7 1303.35L130.004 1308.23L127.567 1314.73L125.671 1323.53L123.64 1329.89L124.805 1336.34L120.197 1333.78H115.589L108.934 1336.34L107.654 1326.1L105.094 1333.78V1339.92L100.742 1344.53V1366.29Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8030_2470)" />
+              <path class="char-item" data-target-id="14"
+                d="M1084.6 1473.53L1092.14 1477.98L1089.79 1480.45L1092.14 1481.32L1094.87 1479.34L1099.82 1477.24L1102.42 1474.51V1470.93H1106V1464L1104.77 1461.15L1102.42 1458.92H1098.33L1095.49 1458.06L1088.93 1458.92L1088.06 1452.37L1085.34 1452.98L1082.62 1456.94L1079.77 1460.04H1081.75V1467.09L1084.6 1473.53Z"
+                stroke="#FFAA00" stroke-width="2" mask="url(#path-1-outside-1_8030_2470)" />
+              <path class="char-item" data-target-id="14"
+                d="M1154.76 1458.06L1150.92 1458.92L1156 1461.65L1158.84 1468.95H1161.69V1472.04H1164.41L1166.14 1468.95L1171.46 1468.2V1461.15L1175.67 1452.37L1173.81 1452.98L1171.46 1456.94L1167.5 1449.15L1163.54 1447.79V1444.2H1159.46L1156 1445.44L1154.76 1447.79L1156 1452.37L1154.76 1458.06Z"
+                stroke="#FFAA00" stroke-width="2" mask="url(#path-1-outside-1_8030_2470)" />
+              <path class="char-item" data-target-id="14"
+                d="M1166.14 1499.14H1163.54L1168.25 1503.1L1171.46 1509.66L1173.81 1513.25H1176.54L1175.67 1510.52L1178.15 1509.66L1183.96 1508.67V1497.41L1180.74 1490.97L1178.15 1489.36L1175.67 1485.9L1171.46 1483.42L1168.25 1485.9L1166.88 1488.62L1167.5 1491.96L1166.14 1499.14Z"
+                stroke="#FFAA00" stroke-width="2" mask="url(#path-1-outside-1_8030_2470)" />
+              <path class="char-item" data-target-id="14"
+                d="M1159.95 1390.92L1159.46 1393.14L1163.15 1395.81L1165.46 1395.01L1168.66 1393.14L1172.66 1394.12L1176.22 1395.81L1172.66 1402.12L1170.71 1405.14L1171.59 1407.27H1173.19L1176.22 1405.14L1178.17 1402.12L1179.95 1397.85L1181.81 1395.01L1183.59 1390.03L1184.92 1384.34L1188.39 1380.35L1189.19 1381.59L1188.04 1386.92L1186.35 1391.45L1188.04 1392.25L1190.79 1388.34L1192.39 1382.92L1194.43 1379.01L1195.15 1373.68L1195.59 1366.57L1197.81 1365.86L1202.17 1362.48L1207.32 1357.51L1208.03 1352.71V1343.46L1206.34 1337.95L1203.77 1346.75L1202.17 1354.57L1195.15 1361.68L1196.74 1358.84L1199.06 1352.71L1200.83 1346.22L1201.37 1338.75L1199.94 1335.02L1196.74 1346.22L1194.43 1352.17L1191.77 1356.26L1188.04 1359.28H1183.59L1179.06 1365.41L1174.79 1366.57L1166.26 1373.68L1164.31 1370.92V1375.37L1162.71 1380.35L1159.95 1382.92L1160.93 1385.68V1387.9L1159.46 1388.34L1160.93 1390.03L1159.95 1390.92Z"
+                stroke="#FFAA00" stroke-width="2" mask="url(#path-1-outside-1_8030_2470)" />
+            </svg>
+
+            <div class="infos" id="scene-2-infos">
+              <div class="info" data-target-id="1">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Stonewood Tree</div>
+                    <div class="t2">Grows exclusively in the Azure Forest biome. At the end of its
+                      life cycle, the wood slowly petrifies, eventually turning
+                      the entire tree into stone.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="2">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Clay Shingles</div>
+                    <div class="t2">Available in multiple colors and can be placed on both sloped
+                      roofs and flat surfaces. A beautiful and practical
+                      solution for protecting buildings from rain.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="3">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup small">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Abandoned Outposts</div>
+                    <div class="t2">Remnants of the first age of colonization, left behind after
+                      their original purpose was lost. These structures now stand
+                      empty, slowly reclaimed by the environment.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="4">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Crafting & Technology Chains</div>
+                    <div class="t2">From simple tools like a wooden workbench and a handheld
+                      fabricator to advanced automation using upgraded fabricators,
+                      conveyors, and drones.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="5">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Ranged Weapons</div>
+                    <div class="t2">Progress from simple, improvised bows and crossbows to
+                      high-tech blasters and devastating railguns, mastering distance
+                      combat as technology evolves.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="6">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Stridewing</div>
+                    <div class="t2">A rideable bird capable of fast running, swimming, and gliding
+                      from high elevations. Too heavy for true flight, but well
+                      suited for crossing medium distances with ease.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="7">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Raft</div>
+                    <div class="t2">The most basic and accessible means of transport, ideal for
+                      navigating rivers and calm waters with minimal resources.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="8">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup small">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Fishing</div>
+                    <div class="t2">A relaxing way to gather food and rare materials from rivers,
+                      lakes, and coastal waters. With the right gear and
+                      patience, players can catch a variety of fish and discover hidden treasures beneath the surface.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="9">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Blueboo</div>
+                    <div class="t2">Strange and amusing creatures resembling a mix of cat and pig.
+                      Friendly and clever, yet with a stubborn streak. They
+                      adore local fruits and vegetables, though in the harsh world of Tesera, some locals and colonists
+                      see them as food - a
+                      grim reminder of the planet’s unforgiving nature.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="10">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Redhorn</div>
+                    <div class="t2">Large, cow-like creatures with sharp horns running along their
+                      backs. Generally peaceful unless provoked, though males
+                      are aggressive and dangerous. They provide delicious milk and meat, as well as high-quality hides,
+                      making them valuable
+                      yet formidable inhabitants of Tesera.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="11">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Crafy Bot</div>
+                    <div class="t2">A companion robot miraculously untouched by the Great
+                      Discharge and still fully operational. Years spent in this
+                      dimension have made it rather blunt, yet it remains loyal to its original programming. A reliable
+                      mentor for newcomers -
+                      and it definitely has no hidden motives. Really.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="12">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Hoverbike</div>
+                    <div class="t2">A fast and versatile personal vehicle that glides effortlessly
+                      above the ground. Ideal for traversing diverse terrain
+                      quickly, combining speed, agility, and futuristic design for both exploration and travel across
+                      Tesera.</div>
+                    <div class="splide">
+                      <div class="splide__track">
+                        <ul class="splide__list">
+                          <li class="splide__slide"><img loading="lazy" decoding="async"
+                              src="../images/scene_2/slider1-slide1.avif" alt="" class="slide_image"></li>
+                          <li class="splide__slide"><img loading="lazy" decoding="async"
+                              src="../images/scene_2/slider1-slide2.avif" alt="" class="slide_image"></li>
+                          <li class="splide__slide"><img loading="lazy" decoding="async"
+                              src="../images/scene_2/slider1-slide3.avif" alt="" class="slide_image"></li>
+                          <li class="splide__slide"><img loading="lazy" decoding="async"
+                              src="../images/scene_2/slider1-slide4.avif" alt="" class="slide_image"></li>
+                        </ul>
+                      </div>
+                      <div class="splide__arrows">
+                        <button class="splide__arrow splide__arrow--prev">
+                          <img src="../images/arrow-left.svg" alt="Previous slide">
+                        </button>
+                        <button class="splide__arrow splide__arrow--next">
+                          <img src="../images/arrow-right.svg" alt="Next slide">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="13">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Animal Taming</div>
+                    <div class="t2">A challenging but rewarding process for those who enjoy caring
+                      for creatures of all kinds. Shear sheep for wool, collect
+                      eggs and raise chicks, and breed Blueboo and Redhorn to grow a thriving farm. A fulfilling way to
+                      connect with the
+                      wildlife of Tesera.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="14">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup left">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Behavior of fauna</div>
+                    <div class="t2">In Tesera, the world is alive with complex relationships.
+                      Predators hunt smaller creatures, while many animals display
+                      surprising intelligence - hiding treasures like bones or rare items.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <div class="grid">
+          <div class="item top-left">
+            <img src="../images/scene_transition/grid-image1.avif" alt="Gallery image 1" class="image">
+          </div>
+          <div class="item top-right">
+            <img src="../images/scene_transition/grid-image2.avif" alt="Gallery image 2" class="image">
+          </div>
+          <div class="item bottom-left">
+            <img src="../images/scene_transition/grid-image3.avif" alt="Gallery image 3" class="image">
+          </div>
+          <div class="item bottom-right">
+            <img src="../images/scene_transition/grid-image4.avif" alt="Gallery image 4" class="image">
+          </div>
+          <div class="item center">
+            <video class="video" autoplay loop muted playsinline preload="metadata">
+              <source data-src="../videos/overworld.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene scene-3">
+        <div class="level-label level-3">
+          <div class="name">Caves</div>
+          <div class="description">A vast underground world of winding tunnels, rich ores, and
+            mysterious phenomena. Strange creatures, energy crystals,
+            and abandoned structures make exploration both rewarding and dangerous.</div>
+        </div>
+        <div class="parallax-layer islands-back-2">
+          <div>
+            <img src="../images/scene_3/Rocks_01.avif" alt="">
+            <img src="../images/scene_3/Rocks_02.avif" alt="">
+            <img src="../images/scene_3/Rocks_03.avif" alt="">
+            <img src="../images/scene_3/Rocks_04.avif" alt="">
+          </div>
+        </div>
+        <div class="main-layer">
+          <img src="../images/scene_3/test-part-1.avif" alt="" loading="eager" fetchpriority="high">
+          <img src="../images/scene_3/test-part-2.avif" alt="" loading="eager">
+          <img src="../images/scene_3/test-part-3.avif" alt="" loading="eager">
+          <img src="../images/scene_3/test-part-4.avif" alt="" loading="eager">
+          <div class="scene-svg">
+            <svg viewBox="0 0 1440 1736" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="char-item" data-target-id="1"
+                d="M624.769 48.9141L624.768 128.839H697.254V95.4059L692.398 80.8374H662.513V61.6598L659.712 48.9141H624.769Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8037_2426)" />
+              <path class="char-item" data-target-id="2"
+                d="M1148.37 47.7931L1147.74 51.6447H1155.32V46.6754L1158.68 51.6447H1166.13L1165.39 49.1599L1160.66 41.2089V32.0159L1164.39 36.4882L1169.73 41.2089V38.2275H1174.21L1177.81 39.0971L1174.21 34.8732L1169.73 33.5066L1164.39 28.2889L1160.66 21.9531V19.0964H1164.39L1165.39 13.6295L1164.39 4.06364L1159.55 3.07031L1149.36 5.43022V12.8848L1151.1 19.0964L1147.74 20.3385L1144.64 29.7798V34.8732L1146.75 41.2089L1144.64 43.6942V46.6754L1148.37 47.7931Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8037_2426)" />
+              <path class="char-item" data-target-id="2"
+                d="M1201.54 74.0063V75.6213H1220.92L1220.17 66.5524L1218.18 58.6015L1224.52 59.9681L1226.26 58.6015H1236.57L1237.81 56.8623L1235.58 54.0049H1226.26L1220.17 52.5142L1223.28 47.7931L1232.1 51.6447H1234.96V50.1537L1238.56 49.1599L1242.04 51.6447L1243.65 50.1537L1239.43 46.6754L1233.22 45.1845L1229.86 42.6998L1233.22 41.2089L1239.43 28.2889L1227.25 23.1954L1220.17 35.4944H1218.18L1217.31 39.0971L1212.97 47.7931L1208.87 59.9681L1210.73 66.5524L1201.54 74.0063Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8037_2426)" />
+              <path class="char-item" data-target-id="3"
+                d="M546.846 455.221L547.866 526.414H625.124L623.45 424.313H585.148V387.819H546.846V424.313H512.549V455.221H546.846Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8037_2426)" />
+              <path class="char-item" data-target-id="4"
+                d="M766.028 488.497L770.405 495.687L773.323 493.707L773.949 491.102L773.323 488.497L774.47 482.87L778.221 482.14V478.909L777.7 470.781L780.931 468.488L786.35 465.675L788.434 466.925L792.915 469.634L793.645 476.409V480.264L792.498 484.432L796.771 485.995L799.897 495.687H806.358L807.4 494.333L805.108 484.954H803.128L798.751 469.634L799.897 466.3L797.292 457.442L796.146 456.713L791.769 458.275L789.163 455.358V453.065L785.203 450.46V443.79L770.405 443.061L769.155 451.294L766.028 455.358L763.007 458.275L757.066 457.442L755.19 465.049V469.634L751.439 484.432H749.563L748 493.707L750.188 498.501H756.024L758.733 496.417L759.463 493.707V488.497L756.024 485.995L759.463 470.781H762.069L763.007 466.925L764.57 470.781L766.028 478.909L767.696 479.43V484.954L766.028 488.497Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8037_2426)" />
+              <path class="char-item" data-target-id="5"
+                d="M1163.79 659.26V710.26H1195V740.076H1288.76V715.127H1312.9V624.37H1281.05V595.151H1225.69V624.37H1195V659.26H1163.79Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8037_2426)" />
+              <path class="char-item" data-target-id="6"
+                d="M99.2411 935.767L96.557 950.379L102.521 951.125L103.863 939.048L105.056 926.225H106.696L108.486 935.767L107.74 951.125H116.239L114.897 948.143V939.048L116.239 933.978L121.905 932.785L119.668 922.497L116.239 911.762V900.281L117.581 893.273V887.16L101.478 885.668L98.3466 891.484L101.478 894.913V899.535L95.5136 901.623L91.3388 920.558L90.2949 929.803H96.557L99.2411 923.988V935.767Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8037_2426)" />
+              <path class="char-item" data-target-id="7"
+                d="M491.889 1120.26L380.729 1119.17V996.26L404.131 995.332V970.564H491.889V1120.26Z" stroke="#FFAA00"
+                stroke-width="3" mask="url(#path-1-outside-1_8037_2426)" />
+              <path class="char-item" data-target-id="8" d="M632.5 1006.26H609.5L608 1262.76H632.5V1006.26Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8037_2426)" />
+              <path class="char-item" data-target-id="9"
+                d="M1138.15 978.297L1151.28 984.946L1153.06 981.283L1151.28 977.324V972.573L1143.56 962.873L1139.35 966.022L1146.25 975.228L1139.35 974.205L1138.15 978.297Z"
+                stroke="#FFAA00" stroke-width="2" mask="url(#path-1-outside-1_8037_2426)" />
+              <path class="char-item" data-target-id="10"
+                d="M1057.05 1170.67V1235.05H1084.96V1280.09H1130.95L1132 1235.05H1188.03V1178.97L1178.5 1170.67H1130.95V1144.24L1120.5 1136.73H1084.96V1170.67H1057.05Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8037_2426)" />
+              <path class="char-item" data-target-id="11"
+                d="M37 1506.76H3V1614.26H33.5V1653.26H73V1614.26H110V1580.26H148.5V1503.26L158.5 1491.26H124.564V1454.76H90.5L73 1467.76H37V1506.76Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8037_2426)" />
+              <path class="char-item" data-target-id="12"
+                d="M584.028 1540.18L589.865 1552.17L613.534 1550.55V1527.21L607.373 1513.27H589.865L584.028 1516.83V1540.18Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8037_2426)" />
+              <path class="char-item" data-target-id="13"
+                d="M840.169 1440.26V1511.09H865.641V1549.46H948.673V1511.09H986.385V1472.72H948.673V1440.26H912V1400.26H869.686V1440.26H840.169Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8037_2426)" />
+              <path class="char-item" data-target-id="14"
+                d="M834.956 1659.39V1732.86H876.837V1699.49H988.638V1659.39H948.176V1620.35H876.837V1659.39H834.956Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8037_2426)" />
+            </svg>
+
+            <div class="infos" id="scene-3-infos">
+              <div class="info" data-target-id="1">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Coal</div>
+                    <div class="t2">A common mineral used as a basic fuel source. Easily mined and
+                      essential for crafting torches, powering furnaces, and
+                      kickstarting early technological processes in Tesera.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="2">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup left">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Hollows</div>
+                    <div class="t2">Shells of long-deceased humans whose skeletons have been
+                      replaced with energy crystals, fully animating the dead bodies.
+                      The nature of this phenomenon remains a mystery - the crystals may possess a form of intelligence,
+                      or perhaps are
+                      controlled by an unknown entity.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="3">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Copper Ore</div>
+                    <div class="t2">A versatile metal resource used for crafting basic tools,
+                      wiring, and machinery. Easily mined, it forms the foundation
+                      of many technological and construction processes in Tesera.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="4">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Hauler Bot</div>
+                    <div class="t2">A forgotten autonomous loader, twisted by strange influences.
+                      Aggressive toward intruders while guarding abandoned
+                      mines. Slow but capable of hurling ore or containers at threats.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="5">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup left">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Diamond Ore</div>
+                    <div class="t2">Extremely hard and resilient, yet unsuitable for crafting
+                      conventional tools. Instead, diamonds are perfect for creating
+                      diamond coatings on equipment and for use in high-precision instruments, enhancing performance and
+                      durability.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="6">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Endoskeleton</div>
+                    <div class="t2">Originally the inner frames of soldiers from early
+                      colonization expeditions. After the Great Discharge, they lost
+                      control of their minds, endlessly hunting perceived targets. Rare moments of “kindness” appear,
+                      but are likely just
+                      glitches.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="7">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Abandoned Mines</div>
+                    <div class="t2">Old tunnels filled with buried supplies, rusted machinery, and
+                      forgotten storage, often guarded by automated turrets. A
+                      place of hidden treasures-and lurking dangers.</div>
+                    <div class="splide">
+                      <div class="splide__track">
+                        <ul class="splide__list">
+                          <li class="splide__slide"><img loading="lazy" decoding="async"
+                              src="../images/scene_3/slider1-slide1.avif" alt="" class="slide_image"></li>
+                          <li class="splide__slide"><img loading="lazy" decoding="async"
+                              src="../images/scene_3/slider1-slide2.avif" alt="" class="slide_image"></li>
+                          <li class="splide__slide"><img loading="lazy" decoding="async"
+                              src="../images/scene_3/slider1-slide3.avif" alt="" class="slide_image"></li>
+                          <li class="splide__slide"><img loading="lazy" decoding="async"
+                              src="../images/scene_3/slider1-slide4.avif" alt="" class="slide_image"></li>
+                        </ul>
+                      </div>
+                      <div class="splide__arrows">
+                        <button class="splide__arrow splide__arrow--prev">
+                          <img src="../images/arrow-left.svg" alt="Previous slide">
+                        </button>
+                        <button class="splide__arrow splide__arrow--next">
+                          <img src="../images/arrow-right.svg" alt="Next slide">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="8">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Rope Ladders</div>
+                    <div class="t2">Simple and practical, allowing easy descent into the deepest
+                      parts of caves.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="9">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup left">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Energy Crystal</div>
+                    <div class="t2">Contain a strong, though finite, energy charge. Can be used to
+                      power certain devices, such as electric furnaces, in
+                      Tesera.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="10">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup left">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Titanium Ore</div>
+                    <div class="t2">A widely used and reliable metal. Highly heat-resistant, ideal
+                      for tools and weapons, and essential for crafting many
+                      advanced devices in Tesera.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="11">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Gold Ore</div>
+                    <div class="t2">A valuable metal used for crafting high-quality tools,
+                      decorative items, and advanced circuitry. Highly sought after for
+                      both its utility and rarity in Tesera.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="12">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Glowing Goolobe</div>
+                    <div class="t2">A strange and mysterious object, resembling a creature’s
+                      cocoon but filled only with sticky, glue-like slime. No one has
+                      ever seen anything emerge from it.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="13">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup left">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Iron Ore</div>
+                    <div class="t2">A fundamental metal used for crafting tools, weapons, and
+                      machinery. Strong, versatile, and essential for both basic and
+                      advanced construction in Tesera.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="14">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup left">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Redstone</div>
+                    <div class="t2">A mysterious red mineral that reacts uniquely with copper,
+                      forming an excellent conductor for circuits and devices in
+                      Tesera.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <div class="grid">
+          <div class="item top-left">
+            <img src="../images/scene_transition/grid2-image1.avif" alt="Gallery image 1" class="image">
+          </div>
+          <div class="item top-right">
+            <img src="../images/scene_transition/grid2-image2.avif" alt="Gallery image 2" class="image">
+          </div>
+          <div class="item bottom-left">
+            <img src="../images/scene_transition/grid2-image3.avif" alt="Gallery image 3" class="image">
+          </div>
+          <div class="item bottom-right">
+            <img src="../images/scene_transition/grid2-image4.avif" alt="Gallery image 4" class="image">
+          </div>
+          <div class="item center">
+            <video class="video" autoplay loop muted playsinline preload="metadata">
+              <source data-src="../videos/caves.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="scene scene-4">
+        <div class="level-label level-4">
+          <div class="name">ereb</div>
+          <div class="description">A volcanic layer covered in ash, with glowing flora, massive fungi,
+            and rare minerals like Nihonium. Lava seas hide deep
+            caves, while native wood and energy sources sustain life. Aggressive Teseranids roam abandoned research
+            outposts left
+            after the Great Discharge.</div>
+        </div>
+        <div class="parallax-layer islands-back-2">
+          <div>
+            <img src="../images/scene_4/test-back-1.avif" alt="">
+            <img src="../images/scene_4/test-back-2.avif" alt="">
+            <img src="../images/scene_4/test-back-3.avif" alt="">
+            <img src="../images/scene_4/test-back-4.avif" alt="">
+          </div>
+        </div>
+        <div class="main-layer">
+          <img src="../images/scene_4/test-part-1.avif" alt="" loading="eager" fetchpriority="high">
+          <img src="../images/scene_4/test-part-2.avif" alt="" loading="eager">
+          <img src="../images/scene_4/test-part-3.avif" alt="" loading="eager">
+          <img src="../images/scene_4/test-part-4.avif" alt="" loading="eager">
+          <div class="scene-svg">
+            <svg viewBox="0 0 1440 1066" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="char-item" data-target-id="1"
+                d="M528.146 283.853V286.066L580.759 285.875V266.61H588.525L586.877 262.536L586.009 261.013L582.234 260.622L590.087 251.815L587.527 249.559L577.678 258.583L574.641 257.672L568.974 260.322L566.625 263.845L559.625 262.536L558.677 263.123L563.283 265.607L560.935 267.458V275.639H559.625L556.328 267.458L554.747 266.194L552.354 264.071L545.353 267.458H541.695L539.843 266.555H535.056L533.069 268.678H528.733L525.617 272.517L526.204 273.962V278.117L527.469 279.472V283.537L528.146 283.853Z"
+                stroke="#FFAA00" stroke-width="2" mask="url(#path-1-outside-1_8021_3520)" />
+              <path class="char-item" data-target-id="2"
+                d="M765.528 95.6267V152.143H825.128V200.564H841.639V214.849H857.965V228.763H876.888V224.31H920.67V195.15H913.719V187.498H956.041V192.172H973.012V174.178H1012.07V190.993H1019.57V133.043H1009.19V99.0496H999.607V87.3001H988.541V62.6602H965.955V51.6562H923.542L922.721 53.0781H914.28V42.5833H904.469V33.9137H894.545V10.5287H874.81V3H826.329V12.4679H815.378V14.0644H805.91V33.229H795.301V43.8376H785.149V65.2836H775.224V95.6267H765.528Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8021_3520)" />
+              <path class="char-item" data-target-id="3"
+                d="M996.767 381.912V409.061L1003.89 416.436H1033.01V402.406H1062.86V388.972H1091.98V375.537H1104.59V390.517H1123.25V420.002H1183.05V405.105L1180.44 403.595V390.517H1183.05V376.369H1295.17V380.174L1297.55 382.552V408.47L1300.04 410.253H1322.24V418.563L1330.72 420.834H1388.38V407.043L1386.12 405.735V391.231H1390.4V376.964H1420.48V363.648L1430.94 333.212L1434.15 273.529L1428.33 243.926V227.043H1310.86L1299.09 213.133L1301.85 124.057H1292.43V76.418H1290.47L1287.98 97.0379L1286.12 124.057H1271.01V102.46H1257.94L1240.16 117.747V124.057H1209.59L1206.83 212.315L1195.55 223.603H1189.59V217.2H1173.71L1171.57 218.767H1166.45L1164.74 227.737L1081.87 228.66L1077.77 268.662L1077.1 297.912H1075.2L1074.67 299.912H1070.68L1071.79 303.014V319.525H1070.68V322.96H1074.67L1076.44 326.285L1077.77 354.209H1054.61V381.912H996.767Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8021_3520)" />
+              <path class="char-item" data-target-id="4"
+                d="M667.435 407.024L670.281 407.412L670.928 408.77H675.327L675.715 404.307L676.491 400.62L680.308 404.307L680.631 407.024H691.951L694.603 405.083L701.46 399.52V407.024H704.759V408.77H707.411L708.705 407.865V402.366L712.133 404.307V407.412L715.95 407.865L716.273 409.353H721.254V403.725L721.707 399.52L723.971 397.386L732.768 407.865H745.9L748.164 407.153L748.487 405.083L757.543 396.739L759.937 406.054L759.613 409.741H765.371V407.153H767.635V404.307L769.446 402.884L771.516 406.054L772.098 409.741H775.462V407.865H777.338V402.884L778.049 401.978L782.965 407.153H797.132L798.62 405.083H799.849V410.258H803.212L804.183 406.054H805.218L805.8 408.641H808.581L809.034 399.52L807.029 394.087C807.029 394.087 805.218 391.76 803.212 391.873C801.207 391.987 798.139 394.602 798.139 394.602C797.62 389.132 791.203 386.075 789.952 386.037C788.701 385.999 783.907 388.695 782.562 390.092C781.216 391.489 780.22 393.634 780.78 395.38L777.338 392.442C775.948 390.141 774.311 390.304 771.516 390.661L769.446 395.38C769.64 392.491 769.73 385.651 768.54 381.408C767.35 377.165 764.81 374.81 763.689 374.163H759.937C759.937 374.163 756.185 375.538 756.185 376.492V386.712C756.034 386.648 755.176 386.557 752.951 386.712C753.106 379.985 750.04 376.923 748.487 376.233C748.487 376.233 748.603 372.999 747.58 371.673C746.557 370.346 744.017 368.148 744.017 368.148L743.79 364.017C742.841 362.982 740.79 360.928 738.978 360.773C737.167 360.618 734.946 363.345 734.062 364.509V368.341L730.184 372.158C729.946 372.654 729.107 374.306 729.211 376.945C726.166 378.608 726.098 381.563 725.408 383.763L723.971 375.78L721.254 375.328L720.219 374.163C717.912 373.794 715.213 374.163 714.569 374.553C713.924 374.942 713.88 377.786 713.88 377.786C713.88 377.786 713.415 380.276 712.133 380.503C710.851 380.731 710.741 381.906 710.741 381.906V398.051L708.705 397.709C708.446 395.294 708.277 391.494 706.441 389.817C705.924 386.454 703.237 383.996 699.219 383.996C698.651 376.945 695.336 373.215 693.827 372.158V369.74C693.827 369.74 693.269 368.73 692.132 368.73C690.995 368.73 689.82 369.571 689.82 369.571L688.91 366.466C688.91 366.466 688.152 365.495 687.053 365.495C685.954 365.495 684.771 366.466 684.771 366.466C684.771 366.466 684.355 365.495 683.339 365.495C682.323 365.495 681.019 366.466 681.019 366.466V369.571C681.019 369.571 680.307 368.716 679.337 368.73C678.368 368.743 674.253 373.248 673.516 376.751C673.309 377.734 674.448 382.582 676.491 385.936L672.535 383.996L667.435 394.087V407.024Z"
+                stroke="#FFAA00" stroke-width="2" mask="url(#path-1-outside-1_8021_3520)" />
+              <path class="char-item" data-target-id="5"
+                d="M358.71 451.411H326.285V660.277H360.657V689.863H390.42L391.48 745.498H428.492V716.62H458.431V685.319H489.133V662.734H512.387V566.808H482.493V509.114H456.141V418.934H428.028V390.18H421.158V332.286H391.058L385.731 334.084V392.748H358.71V451.411Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8021_3520)" />
+              <path class="char-item" data-target-id="6"
+                d="M537.701 689.817L543.585 696.253V739.918H589.186V732.442L592.342 729.154L589.186 725.815V709.113H628.816V705.11L630.374 703.229V699.716L634.162 695.708L628.816 689.594V672.127L632.969 670.176V665.859L635.96 661.184L628.816 655.584V650.292H627.791V646.028H624.092V648.889H616.899V645.103H611.659L607.138 648.889H599.483L598.712 645.601H596.914L595.321 646.028V648.889H589.063L587.802 644.303L581.001 646.654L574.602 649.916H571.534V655.885L565.737 662.042L571.534 669.361V673.55H569.111L567.381 676.059H561.556L559.956 672.165H555.353L551.546 676.059H543.585V684.315L537.701 689.817Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8021_3520)" />
+              <path class="char-item" data-target-id="7"
+                d="M334.742 1033.36L342.388 1031.77V1035.85L346.466 1038.11L345.409 1042.79L346.466 1044.76L345.409 1048.38L348.429 1052.76L350.846 1058.05L355.83 1057.29L356.888 1060.47L362.325 1058.05L363.533 1059.71L369.877 1058.05L371.236 1059.71L378.033 1058.05L382.715 1055.63L386.491 1054.42L389.512 1050.19L392.382 1049.44V1045.51L395.101 1041.28L397.215 1035.09V1030.56L398.424 1025.27L397.215 1023.46H392.382L393.137 1019.38L391.476 1015.91L394.194 1010.02L393.137 1007L395.101 1004.43L397.215 1000.05L398.424 998.086V994.461H405.371L410.234 991.627L415.491 990.836L418.716 987.966L423.345 985.852L423.845 981.863L427.423 980.263L425.324 974.86L428.481 969.842L426.409 964.504L427.423 959.079L432.408 954.737L434.522 951.112L428.481 947.336L427.423 943.258L429.689 940.237L432.408 937.519L429.689 933.743L433.767 930.722L432.408 926.946L435.277 924.378L432.408 922.415L430.746 918.035L427.423 915.467L425.611 912.747L420.929 915.467L419.116 914.711L415.491 911.087L410.96 913.503L408.543 910.18L405.371 912.747L399.934 915.467H395.101L393.137 914.711L389.512 921.055L385.434 919.092L383.773 921.055L380.299 919.092L378.033 921.055L373.351 913.503H371.236L368.669 911.087L365.95 915.467H357.643L355.83 919.092L352.961 922.415L354.471 929.06V934.649L356.888 940.237L358.7 946.581H354.471L351.903 948.998H348.429L346.466 951.112L340.273 948.998L336.044 951.112L331.211 950.055L329.096 952.32L328.039 956.55L324.716 955.493V960.024H320.638L318.675 962.44L314.596 963.346L320.638 969.842L324.081 979.453L321.295 983.33L322.299 987.966L314.596 992.195L312.482 996.122L310.217 1000.05L311.424 1003.22L313.42 1007.92L311.424 1011.92L314.596 1017.49L318.675 1019.38V1023.46L323.206 1025.27L324.081 1029.61L328.039 1031.77L332.319 1030.56L334.742 1033.36Z"
+                stroke="#FFAA00" stroke-width="2" mask="url(#path-1-outside-1_8021_3520)" />
+              <path class="char-item" data-target-id="8"
+                d="M1099.85 1051.86L1103.37 1061.86L1216.49 1062.22V1041.46L1207.62 1026.09H1185.27V1006.81L1180.32 999.418H1160.4V976.621H1129.23V999.418H1099.85V1051.86Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8021_3520)" />
+            </svg>
+
+
+            <div class="infos" id="scene-4-infos">
+              <div class="info" data-target-id="1">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Destroyed Hoverbike</div>
+                    <div class="t2">The remains of a crashed vehicle, hinting at an unfortunate
+                      accident. There’s a chance its anti-gravity module is still
+                      functional.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="2">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup left">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Dark Mushrooms</div>
+                    <div class="t2">Massive native fungi found throughout this layer. Their
+                      interiors sometimes contain Shroomlight - the essence of glowing
+                      mushrooms, serving as food for some creatures and as a gentle source of warm light for humans.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="3">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup left">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Abandoned Outposts</div>
+                    <div class="t2">Structures left behind after the collapse of colonization
+                      efforts. Filled with rusted equipment, buried supplies, and
+                      remnants of past research, often guarded by automated turrets, they stand as silent witnesses to
+                      Tesera’s forgotten
+                      history.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="4">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Teseranids</div>
+                    <div class="t2">Insect-like hive creatures that are highly aggressive and
+                      organized into a strict hierarchy. Their swarm includes
+                      workers, scouts, guards, and hunters. Beyond consuming flesh, they are drawn to certain metals,
+                      using a unique digestive
+                      system that produces Nihonium as a byproduct.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="5">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Erebite</div>
+                    <div class="t2">A very durable black stone native to the Ereb layer. On rare
+                      occasions, a shimmering variant can be found, marked by
+                      faintly glowing inclusions. Formed under layers of volcanic ash, this variant emerges only where
+                      residual heat and
+                      pressure remain trapped deep below the surface.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="6">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Glowstone Ore</div>
+                    <div class="t2">A mysterious glowing mineral that emits light and possesses
+                      unusual properties. Rumors suggest it can split atoms and
+                      reassemble them in the same arrangement.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="7">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Ereb Pine</div>
+                    <div class="t2">A native wood that emits a faint glow. Its foliage may look
+                      ominous, but it is completely harmless..</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="8">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup left">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Nihonium</div>
+                    <div class="t2">An incredibly durable yet low-melting metal. Widely used to
+                      craft simple but reliable equipment.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <div class="grid">
+          <div class="item top-left">
+            <img src="../images/scene_transition/grid3-image1.avif" alt="Gallery image 1" class="image">
+          </div>
+          <div class="item top-right">
+            <img src="../images/scene_transition/grid3-image2.avif" alt="Gallery image 2" class="image">
+          </div>
+          <div class="item center">
+            <video class="video" autoplay loop muted playsinline preload="metadata">
+              <source data-src="../videos/ereb.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item bottom-left">
+            <img src="../images/scene_transition/grid3-image3.avif" alt="Gallery image 3" class="image">
+          </div>
+          <div class="item bottom-right">
+            <img src="../images/scene_transition/grid3-image4.avif" alt="Gallery image 4" class="image">
+          </div>
+
+        </div>
+      </section>
+
+      <section class="hero-final">
+        <div class="bg">
+          <video autoplay loop muted playsinline preload="metadata">
+            <source data-src="../videos/portal.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="content">
+          <div class="top">
+            <img src="../images/logo4.png" alt="logo" class="logo">
+            <h2 class="title">
+              START YOUR<br>
+              <span class="accent">ADVENTURE!</span>
+            </h2>
+          </div>
+          <div class="buttons">
+            <a href="./roadmap.html" class="btn white">ROADMAP</a>
+            <a href="#" class="btn yellow">JOIN A PLAYTEST</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="main-container mobile">
+      <section class="scene hero-scene">
+        <div class="hero">
+          <div class="logo">
+            <img src="../images/logo4.png" alt="logo" fetchpriority="high">
+          </div>
+          <h1 class="title"><span class="white-text">Tesera is an</span> endless world. Your way to live in it</h1>
+          <div class="subtitle">with an endless procedurally generated world and a wide variety of biomes</div>
+          <div class="btns">
+            <a href="#" class="btn white">
+              <span>Watch video</span>
+              <img class="icon" src="../images/play-video-icon.svg" alt="">
+            </a>
+            <a href="#" class="btn yellow">Join A PLAYTEST</a>
+          </div>
+        </div>
+        <div class="parallax-layer clouds-front">
+          <img src="../images/scene_1/front-big-clouds_mobile.avif" alt="">
+        </div>
+      </section>
+
+      <section class="scene scene-1">
+        <div class="level-label level-1">
+          <div class="name">SKYLANDS</div>
+          <div class="description">A scattered realm of mysteriously floating islands connected by
+            fading
+            energy platforms and filled with ancient ruins of
+            an unknown civilization. Currently considered end-game content.</div>
+        </div>
+        <div class="parallax-layer clouds-back">
+          <img src="../images/scene_1/clouds_step1_mobile.avif" alt="">
+        </div>
+
+        <div class="parallax-layer islands-back-2">
+          <img src="../images/scene_1/bg-island-3rd-plan_mobile.avif" alt="">
+        </div>
+        <div class="main-layer">
+          <img src="../images/scene_1/main-island_mobile.avif" alt="" fetchpriority="high">
+          <div class="scene-svg">
+            <svg viewBox="0 0 375 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="char-item" data-target-id="1"
+                d="M84.9961 101.158L85.7878 101.95H87.4542L91.734 94.421L94.3494 90.6959L97.6782 98.78L101.562 101.95L102.117 98.2253L99.8181 91.1715V88.2391L96.7271 86.2577L97.6782 83.88L96.2516 81.9778L97.6782 70.3272L98.7085 66.84L96.7271 64.5416L98.7085 60.7375L95.5383 56.0612L98.3122 49.6415L107.664 52.574L108.536 50.9889L114.797 52.574L119.236 52.0984L117.73 50.1171L114.797 49.6415L112.182 48.5319L119.236 45.758L110.438 42.667L109.725 44.7278H97.6782L94.3494 37.2776V28.084H89.6724L89.1978 24.2798L83.967 16.1957L83.3308 22.2984L84.5196 24.2798H76.6754L80.1627 30.6995L77.3073 32.3639L81.4286 36.8021L80.1627 41.716L79.766 44.7278L76.0414 43.935L73.9801 44.7278H36.9675V47.264H74.4555L73.0293 50.9889L73.9801 58.6767L75.0098 61.3714L77.3073 60.0241L82.3809 55.1895L84.5196 57.3294L83.3308 58.6767L82.3809 60.7375L81.4286 62.6395L83.3308 65.4135V69.3762L79.766 72.7842L82.3809 75.3997L90.2272 86.2577L89.6724 88.2391H88.1665L85.7878 96.0852V98.2253L84.9961 101.158Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8021_3806)" />
+              <path class="char-item" data-target-id="2"
+                d="M165.587 54.8354L166.908 56.6847C168.317 56.4499 172.474 55.8923 177.828 55.5401C178.674 58.4285 182.583 58.8571 184.433 58.7103L186.722 54.8354C187.603 55.0703 190.28 55.769 193.943 56.6847C197.607 57.6004 198.405 52.0762 198.347 49.1996H199.844L200.724 54.2191L202.662 57.2132L208.914 56.6847V54.2191L207.593 53.1624L206.008 45.8533V42.1547L205.127 39.9531V28.5931C205.421 27.7712 206.096 26.0218 206.448 25.5991C206.801 25.1765 206.301 23.4268 206.008 22.6048L203.806 19.1706L200.724 16.7929L197.026 14.9435L192.446 15.736L190.949 17.5853L188.748 22.6048L182.936 25.5991V28.5931L185.578 31.2349L186.722 37.047V45.4129H184.433L181.791 49.1996L168.494 48.6712H165.587V54.8354Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8021_3806)" />
+              <path class="char-item" data-target-id="3"
+                d="M264.621 36.6767L267.574 45.8533L273.691 47.9626L277.278 45.8533L287.72 48.49V51.8652H293.31V49.0174L300.588 47.3298H312.612L313.245 42.6888H304.491L309.87 37.8368L311.98 25.5991L305.229 24.7577V23.1756L311.98 21.6989V17.6908L309.026 15.8978L312.612 13.6828L309.87 4.61168L305.229 3.24048L297.318 7.77609L289.408 13.6828L286.032 12.4171L283.184 15.8978L283.923 17.058L282.446 20.1169H279.598L275.485 27.3948L264.621 36.6767Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8021_3806)" />
+              <path class="char-item" data-target-id="4"
+                d="M460.067 147.541L457.246 180.556L483.912 189.586L506.769 182.249L510.437 149.093L483.912 139.781L460.067 147.541Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8021_3806)" />
+              <path class="char-item" data-target-id="5"
+                d="M-39.2112 72.0932L-36.5809 77.7295H-29.5047V79.9841L-27.9391 81.4245L-26.3108 78.4811H-25.2462L-25.935 82.3013L-24.1189 83.3659L-21.9896 79.3578L-22.6159 84.2427H-19.6724L-17.8562 79.3578V84.2427H-15.2886L-13.7855 77.7295L-9.58957 76.3518L-7.58553 68.7114L-6.01987 67.5841L-8.52493 61.2588L-10.5916 60.5073L-14.5371 53.8063L-15.2886 54.7457L-13.7855 59.3174L-19.2967 60.5073L-17.8562 58.5659L-22.6159 52.178L-23.7431 53.8063L-20.4239 60.5073L-24.1189 61.8225L-25.935 57.5012L-26.8744 57.8144V61.8225L-29.5047 58.5659L-31.133 59.3174L-29.5047 63.4507L-30.5068 64.2649C-32.7196 63.6386 -37.6213 62.1606 -39.5252 61.2588C-40.2266 62.2608 -39.6081 65.8932 -39.2112 67.5841L-35.3918 69.2124L-34.8282 71.6548L-39.2112 72.0932Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8021_3806)" />
+              <path class="char-item" data-target-id="6"
+                d="M181.215 285.62L179.182 286.976H182.91L185.621 290.704L186.298 312.393L190.026 314.087L189.687 319.848L202.565 326.626L234.759 315.104L219.509 302.904V296.804L217.815 296.465V291.72L195.787 281.215H194.093L189.687 278.504L185.282 284.943L181.215 285.62Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8021_3806)" />
+            </svg>
+
+            <div class="infos" id="scene-1-infos">
+              <div class="info" data-target-id="1">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Celestial Sentinel</div>
+                    <div class="t2">A graceful ancient sentinel who has watched over the Skylands
+                      long before humans arrived. Her movements are elegant yet
+                      lethal, and she wields her spear with unmatched mastery-striking with precision both in close
+                      combat and from afar.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="2">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t2">A player boldly meeting their demise at the spear of a
+                      Celestial Sentinel.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="3">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Laser Turret</div>
+                    <div class="tier">Tier: 3</div>
+                    <div class="t2">A high-power laser railgun turret designed for heavy defense.
+                      It delivers devastating damage but operates extremely
+                      slowly, requiring a rare Energy Core to charge each individual shot.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="4">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Halonite Ore</div>
+                    <div class="tier">Tier: 4</div>
+                    <div class="t2">Halonite is a rare, previously unknown refractory metal found
+                      only in the flying islands of the Skylands. It features a
+                      complex internal structure and unusual properties that defy full understanding. Its origins remain
+                      a mystery, shrouded
+                      in speculation and legend.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene scene-transition">
+        <div class="parallax-layer clouds-back">
+          <img src="../images/scene_transition/clouds_back_mobile.avif" alt="">
+        </div>
+        <div class="parallax-layer clouds-front">
+          <img src="../images/scene_transition/clouds_front_mobile.avif" alt="">
+        </div>
+      </section>
+
+      <section class="scene scene-2">
+        <div class="level-label level-2">
+          <div class="name">Overworld</div>
+          <div class="description">The starting layer where players will spend most of their time,
+            filled
+            with a wide range of activities: from peaceful
+            exploration to deadly encounters.</div>
+        </div>
+        <div class="parallax-layer islands-back-2">
+          <img src="../images/scene_2/bg-island-3rd-plan_mobile.avif" alt="">
+        </div>
+        <div class="main-layer">
+          <img src="../images/scene_2/main-island_mobile.avif" alt="">
+          <div class="scene-svg">
+            <svg viewBox="0 0 375 840" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="char-item" data-target-id="1"
+                d="M233.002 125H235.002V125.531L235.688 128.623L237.394 133.314L241.445 135.447L243.151 134.274H249.222L250.821 135.447L253.36 138.752L254.453 142.697L260.104 143.657L262.877 144.403L266.182 143.657L269.701 142.697L271.62 143.657L274.712 146.109L273.539 140.351L268.741 138.752L267.995 134.7L266.182 133.314L264.263 128.623L262.877 124.571V121.586L264.263 117.214L265.329 113L266.182 109.5L265.329 106.658L264.263 104.099V101.327L262.877 98.8747L259.038 95.3561V93.6502L257.332 91.9442L252.854 90.0003L247.341 87.1461V63.754V58.8633L249.222 56.2289L250.821 54.6299L253.36 49.4572L256.558 47.5765H257.781L258.721 46.1648L262.766 44.0956L265.682 41.4625L267.375 37.3235V34.878L266.152 32.7147L263.612 32.0563L262.766 30.4574L260.32 28.1059H256.558L255.053 27.3535L251.761 24.6259L250.256 22.5568L249.786 20.4875L246.588 18.0421L243.39 16.7252L241.697 14.3737V12.0223L239.064 8.26008L235.772 7.69564H233.326L230.881 6.9435L228.435 6.00276L225.502 8.26008L223.002 6.00276L219.406 6.9435L217.713 6.00276L216.019 5.25098L214.142 6.00276H212.447L210.376 6.9435H206.802L205.015 8.26008H202.005L200.787 9.38877L198.813 10.7062L199.56 13.3396L198.813 15.9732L195.896 16.7252L194.392 18.6063H190.532L187.991 18.0421L185.452 20.4875L184.511 22.5568L185.452 24.0617L183.664 25.3791L181.501 26.1307L180.562 27.8241V30.4574V33.8438L182.252 37.7006L185.452 40.8983L190.532 41.4625H194.392L195.896 42.1206L196.927 45.3186L198.813 47.5765L200.787 48.7986L204.356 49.4572H207.46V51.0561V53.4075L208.781 55.1946L210.846 57.8285L214.142 58.3922L213.386 61.7788L212.447 62.2486L210.846 63.754L208.781 64.4127V66.3875L209.723 69.021L211.317 70.6195L213.386 71.1845L211.883 74.8522V77.1094L212.447 79.5556L214.142 82.7535L216.019 84.3522L218.75 85.5003H220.502V90.0003L223.002 91.0003V105.5L225.502 109.5L227.502 113L229.002 116.5L230.002 119.5L231.002 122.5L233.002 125Z"
+                stroke="#FFAA00" stroke-width="2" mask="url(#path-2-outside-2_8021_3969)" />
+              <path class="char-item" data-target-id="2"
+                d="M47.5343 225.471L46.989 228.107V231.834L52.0788 233.743L64.3491 231.834L72.7111 218.2L77.5283 219.655L94.6158 260.374L99.8874 262.01L204.321 244.468L205.048 243.559L202.503 238.833V237.287L199.595 232.652V230.925L197.232 226.653V225.29L194.596 220.927V219.2L191.96 215.019V212.838L190.051 209.566V207.657L186.779 203.112V201.476L184.234 197.114V195.296L180.871 190.024L165.602 183.025L64.8945 197.84L61.4406 201.204V203.84L59.6228 204.748L59.1497 207.374L56.9869 208.384V210.674L55.3509 211.292L55.0552 213.599L53.5929 213.975L53.1333 216.858L51.2533 217.986L50.9882 220.473L49.2612 221.927L48.7159 224.562L47.5343 225.471Z"
+                stroke="#FFAA00" stroke-width="2" mask="url(#path-1-outside-1_8021_3969)" />
+              <path class="char-item" data-target-id="3"
+                d="M221.403 169.818L193.404 205.24L191.963 206.959V208.654L193.858 212.37V214.523L196.466 218.671V220.409L199.166 224.627V226.255L201.502 230.462V232.141L204.489 236.88V238.635L207.215 243.9L205.274 246.103L195.602 247.82L187.578 257.199L193.529 260.331L218.271 253.754L220.463 257.512L212.007 259.705V264.403L216.705 266.908L226.414 264.403L231.425 267.535L241.447 265.969V270.353L244.266 272.232L249.59 271.606V268.474L254.915 267.535L260.865 270.353L269.948 268.474L275.899 271.606L292.498 268.474L298.449 271.606L307.218 269.414L314.108 272.232L321.625 270.98L329.768 269.414L320.372 248.43L326.01 247.177L329.142 249.056V251.562L331.334 252.501L336.345 251.562L354.197 259.391L366.725 252.501L362.027 243.419L375.494 248.43L376.121 239.66L369.544 232.144V228.698L373.302 229.951L381.132 228.072L378.94 225.566H383.324L375.494 217.11V205.522L378.94 201.137V196.126L383.324 191.741L384.577 172.637L377.06 173.576L368.604 182.659V175.455L363.28 172.637L354.824 173.576L354.197 193.621L334.779 170.757L332.587 169.505L325.383 165.12L324.444 163.241L320.372 161.988V160.735L314.108 149.147L306.592 150.087V156.35L300.641 156.037L293.438 154.471L279.344 156.037L278.404 156.664L274.959 155.724L251.156 159.482L249.277 163.241L234.244 170.757L228.606 168.878L221.403 169.818Z"
+                stroke="#FFAA00" stroke-width="2" mask="url(#path-1-outside-1_8021_3969)" />
+              <path class="char-item" data-target-id="4"
+                d="M128.804 396.586L134.659 401.048L136.75 400.42V398.12L138.284 396.238L139.329 395.053L135.217 390.801L136.75 389.267L139.329 390.313L141.63 392.195L140.724 395.82L141.63 398.817L148.043 397.771L147.624 392.962L148.043 390.801L147.206 389.895V386.34L144.976 383.551L145.533 381.46L140.724 377.905L136.75 377.532L136.177 382.32L138.284 384.388L135.217 385.921H132.359L131.174 384.388H128.455V380.066L127.898 379.09L121.206 375.396L119.882 376.65V384.388L115.769 385.921L116.884 388.012V394.425L121.206 397.771V395.053L124.761 392.543L128.804 395.053V396.586Z"
+                stroke="#FFAA00" stroke-width="2" mask="url(#path-1-outside-1_8021_3969)" />
+              <path class="char-item" data-target-id="5"
+                d="M35.7004 454.034L38.5623 455.245L39.4428 453.374H43.0751V442.477L44.1758 440.276V434.222L42.6076 433.39L42.3046 429.819L39.4428 427.287L33.8293 429.158L34.2046 434.576L33.3326 435.692L34.2046 438.9V441.619L35.7004 442.477V454.034Z"
+                stroke="#FFAA00" stroke-width="2" mask="url(#path-1-outside-1_8021_3969)" />
+              <path class="char-item" data-target-id="6"
+                d="M307.243 570.943V572.848L311.492 573.507L314.641 577.682L327.606 576.217V574.752L325.335 570.943H327.606L325.335 567.94L323.357 568.673L319.915 565.45L307.829 567.061V568.673L309.221 570.504L307.243 570.943Z"
+                stroke="#FFAA00" stroke-width="2" mask="url(#path-1-outside-1_8021_3969)" />
+              <path class="char-item" data-target-id="7"
+                d="M137.234 643.2V646.454H138.747L138.936 643.805H141.629L141.952 646.211H143.25V643.2L143.553 642.178L143.25 638.773L144.612 635.859L144.999 633.945L144.612 633.36L143.25 634.308L142.335 631.848H140.223L138.9 631.913L136.747 632.109L135.947 635.035L135.947 639.227L136.283 642.52L137.234 643.2Z"
+                stroke="#FFAA00" stroke-width="2" mask="url(#path-1-outside-1_8021_3969)" />
+              <path class="char-item" data-target-id="8"
+                d="M165.008 797.245V801.453L175.149 804.615L177.251 801.453L181.56 801.989L183.378 798.218L183.042 796.669L184.388 796.274L189.91 785.492L189.102 783.741L192.469 777.613L194.489 772.967L196.037 771.957L199.539 775.122L204.387 771.149L200.145 766.032L200.683 764.483L202.434 763.473L223.241 767.038L224.049 763.473L203.242 758.086V749.669L201.424 747.784L207.08 739.03L205.464 738.357L200.145 746.639L193.479 744.417L194.893 740.242L193.479 739.636L191.593 744.417H189.102L185.735 746.639L186.88 737.616V733.846L186.072 733.038L184.388 732.229L183.78 742.548L179.788 750.639L165.008 745.677L162.527 748.266L177.523 755.494L178.602 759.054L175.149 767.038L172.021 770.274H170.187L168.245 776.747L162.527 786.025L161.772 789.262L162.527 796.274L165.008 797.245Z"
+                stroke="#FFAA00" stroke-width="2" mask="url(#path-1-outside-1_8021_3969)" />
+            </svg>
+
+            <div class="infos" id="scene-2-infos">
+              <div class="info" data-target-id="1">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Stonewood Tree</div>
+                    <div class="t2">Grows exclusively in the Azure Forest biome. At the end of its
+                      life cycle, the wood slowly petrifies, eventually turning
+                      the entire tree into stone.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="2">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Clay Shingles</div>
+                    <div class="t2">Available in multiple colors and can be placed on both sloped
+                      roofs and flat surfaces. A beautiful and practical
+                      solution for protecting buildings from rain.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="3">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Abandoned Outposts</div>
+                    <div class="t2">Remnants of the first age of colonization, left behind after
+                      their original purpose was lost. These structures now stand
+                      empty, slowly reclaimed by the environment.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="4">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Crafting & Technology Chains</div>
+                    <div class="t2">From simple tools like a wooden workbench and a handheld
+                      fabricator to advanced automation using upgraded fabricators,
+                      conveyors, and drones.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="5">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Ranged Weapons</div>
+                    <div class="t2">Progress from simple, improvised bows and crossbows to
+                      high-tech blasters and devastating railguns, mastering distance
+                      combat as technology evolves.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="6">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Raft</div>
+                    <div class="t2">The most basic and accessible means of transport, ideal for
+                      navigating rivers and calm waters with minimal resources.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="7">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Blueboo</div>
+                    <div class="t2">Strange and amusing creatures resembling a mix of cat and pig.
+                      Friendly and clever, yet with a stubborn streak. They
+                      adore local fruits and vegetables, though in the harsh world of Tesera, some locals and colonists
+                      see them as food - a
+                      grim reminder of the planet’s unforgiving nature.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="8">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Hoverbike</div>
+                    <div class="t2">A fast and versatile personal vehicle that glides effortlessly
+                      above the ground. Ideal for traversing diverse terrain
+                      quickly, combining speed, agility, and futuristic design for both exploration and travel across
+                      Tesera.</div>
+                    <div class="splide">
+                      <div class="splide__track">
+                        <ul class="splide__list">
+                          <li class="splide__slide"><img loading="lazy" decoding="async"
+                              src="../images/scene_2/slider1-slide1.avif" alt="" class="slide_image"></li>
+                          <li class="splide__slide"><img loading="lazy" decoding="async"
+                              src="../images/scene_2/slider1-slide2.avif" alt="" class="slide_image"></li>
+                          <li class="splide__slide"><img loading="lazy" decoding="async"
+                              src="../images/scene_2/slider1-slide3.avif" alt="" class="slide_image"></li>
+                          <li class="splide__slide"><img loading="lazy" decoding="async"
+                              src="../images/scene_2/slider1-slide4.avif" alt="" class="slide_image"></li>
+                        </ul>
+                      </div>
+                      <div class="splide__arrows">
+                        <button class="splide__arrow splide__arrow--prev">
+                          <img src="../images/arrow-left.svg" alt="Previous slide">
+                        </button>
+                        <button class="splide__arrow splide__arrow--next">
+                          <img src="../images/arrow-right.svg" alt="Next slide">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <div class="grid">
+          <div class="item top-left">
+            <img src="../images/scene_transition/grid-image1.avif" alt="Gallery image 1" class="image">
+          </div>
+          <div class="item top-right">
+            <img src="../images/scene_transition/grid-image2.avif" alt="Gallery image 2" class="image">
+          </div>
+          <div class="item center">
+            <video class="video" autoplay loop muted playsinline preload="metadata">
+              <source data-src="../videos/overworld.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item bottom-left">
+            <img src="../images/scene_transition/grid-image3.avif" alt="Gallery image 3" class="image">
+          </div>
+          <div class="item bottom-right">
+            <img src="../images/scene_transition/grid-image4.avif" alt="Gallery image 4" class="image">
+          </div>
+
+        </div>
+      </section>
+
+      <section class="scene scene-3">
+        <div class="level-label level-3">
+          <div class="name">Caves</div>
+          <div class="description">A vast underground world of winding tunnels, rich ores, and
+            mysterious phenomena. Strange creatures, energy crystals,
+            and abandoned structures make exploration both rewarding and dangerous.</div>
+        </div>
+        <div class="main-layer">
+          <img src="../images/scene_3/3_plan_mobile.avif" alt="">
+          <div class="scene-svg">
+            <svg viewBox="0 0 375 1186" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+              <path class="char-item" data-target-id="1"
+                d="M168.457 34.3332L168.457 88.8374H217.888V66.038L214.576 56.1031H194.197V43.0251L192.286 34.3332H168.457Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8050_4596)" />
+              <path class="char-item" data-target-id="2"
+                d="M115.318 311.412L116.014 359.961H168.699L167.558 290.334H141.438V265.448H115.318V290.334H91.9294V311.412H115.318Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8050_4596)" />
+
+              <path class="char-item" data-target-id="3"
+                d="M264.788 334.104L267.773 339.008L269.763 337.657L270.189 335.881L269.763 334.104L270.545 330.267L273.103 329.769V327.566L272.748 322.023L274.951 320.46L278.646 318.541L280.068 319.394L283.124 321.241L283.621 325.861V328.49L282.839 331.332L285.753 332.398L287.885 339.008H292.291L293.002 338.084L291.438 331.688H290.088L287.103 321.241L287.885 318.967L286.108 312.927L285.327 312.429L282.342 313.495L280.565 311.505V309.942L277.865 308.165V303.617L267.773 303.119L266.92 308.734L264.788 311.505L262.728 313.495L258.677 312.927L257.397 318.114V321.241L254.839 331.332H253.56L252.494 337.657L253.986 340.926H257.966L259.814 339.505L260.311 337.657V334.104L257.966 332.398L260.311 322.023H262.088L262.728 319.394L263.794 322.023L264.788 327.566L265.925 327.921V331.688L264.788 334.104Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8050_4596)" />
+              <path class="char-item" data-target-id="4"
+                d="M77.8405 764.931L2.03586 764.187V680.37L17.9946 679.737V662.848H77.8405V764.931Z" stroke="#FFAA00"
+                stroke-width="3" mask="url(#path-1-outside-1_8050_4596)" />
+              <path class="char-item" data-target-id="5" d="M173.729 687.19H158.045L157.022 862.109H173.729V687.19Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8050_4596)" />
+              <path class="char-item" data-target-id="6"
+                d="M140.674 1051.29L144.654 1059.47L160.796 1058.37V1042.45L156.594 1032.94H144.654L140.674 1035.37V1051.29Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8050_4596)" />
+              <path class="char-item" data-target-id="7"
+                d="M315.348 983.154V1031.46H332.718V1057.62H389.342V1031.46H415.059V1005.29H389.342V983.154H364.333V955.876H335.477V983.154H315.348Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8050_4596)" />
+              <path class="char-item" data-target-id="8"
+                d="M311.793 1132.59V1182.69H340.354V1159.94H416.596V1132.59H389.003V1105.96H340.354V1132.59H311.793Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8050_4596)" />
+            </svg>
+            <div class="infos" id="scene-3-infos">
+              <div class="info" data-target-id="1">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Coal</div>
+                    <div class="t2">A common mineral used as a basic fuel source. Easily mined and
+                      essential for crafting torches, powering furnaces, and
+                      kickstarting early technological processes in Tesera.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="2">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Copper Ore</div>
+                    <div class="t2">A versatile metal resource used for crafting basic tools,
+                      wiring, and machinery. Easily mined, it forms the foundation
+                      of many technological and construction processes in Tesera.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="3">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Hauler Bot</div>
+                    <div class="t2">A forgotten autonomous loader, twisted by strange influences.
+                      Aggressive toward intruders while guarding abandoned
+                      mines. Slow but capable of hurling ore or containers at threats.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="4">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Abandoned Mines</div>
+                    <div class="t2">Old tunnels filled with buried supplies, rusted machinery, and
+                      forgotten storage, often guarded by automated turrets. A
+                      place of hidden treasures-and lurking dangers.</div>
+                    <div class="splide">
+                      <div class="splide__track">
+                        <ul class="splide__list">
+                          <li class="splide__slide"><img loading="lazy" decoding="async"
+                              src="../images/scene_3/slider1-slide1.avif" alt="" class="slide_image"></li>
+                          <li class="splide__slide"><img loading="lazy" decoding="async"
+                              src="../images/scene_3/slider1-slide2.avif" alt="" class="slide_image"></li>
+                          <li class="splide__slide"><img loading="lazy" decoding="async"
+                              src="../images/scene_3/slider1-slide3.avif" alt="" class="slide_image"></li>
+                          <li class="splide__slide"><img loading="lazy" decoding="async"
+                              src="../images/scene_3/slider1-slide4.avif" alt="" class="slide_image"></li>
+                        </ul>
+                      </div>
+                      <div class="splide__arrows">
+                        <button class="splide__arrow splide__arrow--prev">
+                          <img src="../images/arrow-left.svg" alt="Previous slide">
+                        </button>
+                        <button class="splide__arrow splide__arrow--next">
+                          <img src="../images/arrow-right.svg" alt="Next slide">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="5">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Rope Ladders</div>
+                    <div class="t2">Simple and practical, allowing easy descent into the deepest
+                      parts of caves.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="6">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Glowing Goolobe</div>
+                    <div class="t2">A strange and mysterious object, resembling a creature’s
+                      cocoon but filled only with sticky, glue-like slime. No one has
+                      ever seen anything emerge from it.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="7">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Iron Ore</div>
+                    <div class="t2">A fundamental metal used for crafting tools, weapons, and
+                      machinery. Strong, versatile, and essential for both basic and
+                      advanced construction in Tesera.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="8">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Redstone</div>
+                    <div class="t2">A mysterious red mineral that reacts uniquely with copper,
+                      forming an excellent conductor for circuits and devices in
+                      Tesera.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <div class="grid">
+          <div class="item top-left">
+            <img src="../images/scene_transition/grid2-image1.avif" alt="Gallery image 1" class="image">
+          </div>
+          <div class="item top-right">
+            <img src="../images/scene_transition/grid2-image2.avif" alt="Gallery image 2" class="image">
+          </div>
+          <div class="item center">
+            <video class="video" autoplay loop muted playsinline preload="metadata">
+              <source data-src="../videos/caves.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item bottom-left">
+            <img src="../images/scene_transition/grid2-image3.avif" alt="Gallery image 3" class="image">
+          </div>
+          <div class="item bottom-right">
+            <img src="../images/scene_transition/grid2-image4.avif" alt="Gallery image 4" class="image">
+          </div>
+
+        </div>
+      </section>
+
+      <section class="scene scene-4">
+        <div class="level-label level-4">
+          <div class="name">ereb</div>
+          <div class="description">A volcanic layer covered in ash, with glowing flora, massive fungi,
+            and rare minerals like Nihonium. Lava seas hide deep
+            caves, while native wood and energy sources sustain life. Aggressive Teseranids roam abandoned research
+            outposts left
+            after the Great Discharge.</div>
+        </div>
+        <div class="main-layer">
+          <img src="../images/scene_4/2_plan_mobile.avif" alt="">
+          <div class="scene-svg">
+            <svg viewBox="0 0 375 746" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="char-item" data-target-id="1"
+                d="M298.285 67.6467V107.091H339.881V140.885H351.405V150.855H362.799V160.566H376.006V157.458H406.563V137.107H401.712V131.766H431.249V135.028H443.094V122.47H470.353V134.205H475.587V93.7609H468.342V70.0357H461.655V61.8353H453.932V44.6385H438.168V36.9585H408.567L407.994 37.9509H402.103V30.6263H395.256V24.5755H388.329V8.25448H374.556V3H340.72V9.60792H333.077V10.7222H326.469V24.0976H319.064V31.5017H311.979V46.4695H305.052V67.6467H298.285Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8050_4556)" />
+              <path class="char-item" data-target-id="2"
+                d="M132.605 199.015V200.56L169.325 200.426V186.981H174.745L173.594 184.137L172.989 183.074L170.354 182.802L175.835 176.655L174.049 175.08L167.175 181.379L165.055 180.743L161.1 182.592L159.461 185.051L154.575 184.137L153.913 184.547L157.128 186.281L155.489 187.573V193.283H154.575L152.274 187.573L151.171 186.69L149.5 185.209L144.614 187.573H142.061L140.769 186.943H137.427L136.04 188.424H133.014L130.84 191.104L131.249 192.112V195.012L132.132 195.958V198.795L132.605 199.015Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8050_4556)" />
+              <path class="char-item" data-target-id="3"
+                d="M229.824 284.978L231.811 285.249L232.262 286.197H235.332L235.603 283.082L236.145 280.508L238.809 283.082L239.034 284.978H246.935L248.786 283.623L253.571 279.741V284.978H255.874V286.197H257.725L258.628 285.565V281.727L261.021 283.082V285.249L263.684 285.565L263.91 286.603H267.386V282.675L267.702 279.741L269.282 278.251L275.422 285.565H284.587L286.167 285.068L286.393 283.623L292.714 277.799L294.384 284.301L294.158 286.874H298.176V285.068H299.756V283.082L301.021 282.088L302.465 284.301L302.872 286.874H305.219V285.565H306.528V282.088L307.025 281.456L310.456 285.068H320.343L321.382 283.623H322.239V287.235H324.587L325.264 284.301H325.987L326.393 286.106H328.334L328.65 279.741L327.251 275.948C327.251 275.948 325.987 274.324 324.587 274.404C323.188 274.483 321.046 276.308 321.046 276.308C320.684 272.49 316.205 270.357 315.332 270.33C314.46 270.304 311.113 272.185 310.174 273.161C309.235 274.136 308.54 275.632 308.931 276.851L306.528 274.801C305.558 273.194 304.416 273.308 302.465 273.557L301.021 276.851C301.156 274.835 301.219 270.061 300.388 267.1C299.558 264.138 297.785 262.495 297.002 262.043H294.384C294.384 262.043 291.765 263.003 291.765 263.669V270.802C291.66 270.757 291.061 270.693 289.508 270.802C289.616 266.106 287.477 263.97 286.393 263.488C286.393 263.488 286.474 261.231 285.76 260.305C285.045 259.379 283.273 257.845 283.273 257.845L283.114 254.962C282.452 254.24 281.021 252.806 279.756 252.698C278.492 252.59 276.942 254.493 276.325 255.306V257.98L273.618 260.644C273.453 260.99 272.867 262.143 272.939 263.985C270.814 265.146 270.767 267.208 270.285 268.743L269.282 263.172L267.386 262.856L266.664 262.043C265.054 261.786 263.17 262.043 262.72 262.315C262.271 262.587 262.24 264.572 262.24 264.572C262.24 264.572 261.915 266.31 261.021 266.468C260.126 266.627 260.049 267.447 260.049 267.447V278.715L258.628 278.477C258.447 276.791 258.329 274.139 257.048 272.969C256.687 270.621 254.811 268.906 252.007 268.906C251.611 263.985 249.298 261.381 248.244 260.644V258.956C248.244 258.956 247.855 258.251 247.061 258.251C246.267 258.251 245.447 258.838 245.447 258.838L244.813 256.671C244.813 256.671 244.284 255.993 243.516 255.993C242.749 255.993 241.924 256.671 241.924 256.671C241.924 256.671 241.633 255.993 240.924 255.993C240.215 255.993 239.305 256.671 239.305 256.671V258.838C239.305 258.838 238.808 258.242 238.131 258.251C237.454 258.261 234.583 261.404 234.068 263.849C233.924 264.536 234.719 267.919 236.145 270.26L233.384 268.906L229.824 275.948V284.978Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8050_4556)" />
+              <path class="char-item" data-target-id="4"
+                d="M14.3565 315.957H-8.27344V461.731H15.7158V482.379H36.4878L37.2281 521.208H63.0594V501.053H83.9547V479.208H105.383V463.445H121.612V396.496H100.748V356.229H82.3563V293.29H62.7358V273.222H57.9409V232.816H36.9335L33.2155 234.071V275.014H14.3565V315.957Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8050_4556)" />
+              <path class="char-item" data-target-id="5"
+                d="M139.277 482.348L143.384 486.839V517.314H175.21V512.097L177.412 509.802L175.21 507.471V495.815H202.869V493.021L203.956 491.709V489.256L206.6 486.459L202.869 482.192V470.001L205.768 468.639V465.627L207.855 462.364L202.869 458.455V454.762H202.154V451.786H199.572V453.783H194.552V451.14H190.895L187.739 453.783H182.396L181.859 451.488H180.604L179.492 451.786V453.783H175.124L174.244 450.582L169.498 452.223L165.031 454.5H162.89V458.666L158.844 462.963L162.89 468.071V470.995H161.199L159.992 472.746H155.926L154.81 470.028H151.597L148.94 472.746H143.384V478.507L139.277 482.348Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8050_4556)" />
+              <path class="char-item" data-target-id="6"
+                d="M-2.37169 722.119L2.96468 721.005V723.851L5.81094 725.433L5.07303 728.7L5.81094 730.071L5.07303 732.601L7.18133 735.658L8.86797 739.347L12.3467 738.82L13.0846 741.034L16.8795 739.347L17.7228 740.507L22.1502 739.347L23.099 740.507L27.8427 739.347L31.1105 737.661L33.7459 736.817L35.8542 733.866L37.8571 733.339V730.598L39.7545 727.646L41.2303 723.324V720.162L42.0737 716.472L41.2303 715.207H37.8571L38.3841 712.361L37.2246 709.936L39.122 705.826L38.3841 703.717L39.7545 701.925L41.2303 698.868L42.0737 697.498V694.968H46.9228L50.3163 692.99L53.9855 692.438L56.2363 690.435L59.4671 688.959L59.8158 686.175L62.3133 685.059L60.8483 681.288L63.0512 677.785L61.6055 674.06L62.3133 670.274L65.792 667.244L67.2678 664.713L63.0512 662.078L62.3133 659.232L63.8945 657.124L65.792 655.226L63.8945 652.591L66.7408 650.483L65.792 647.847L67.7949 646.055L65.792 644.685L64.6324 641.628L62.3133 639.836L61.0483 637.938L57.7805 639.836L56.5155 639.308L53.9855 636.779L50.8231 638.465L49.1365 636.146L46.9228 637.938L43.1278 639.836H39.7545L38.3841 639.308L35.8542 643.735L33.008 642.365L31.8484 643.735L29.4239 642.365L27.8427 643.735L24.5748 638.465H23.099L21.3069 636.779L19.4095 639.836H13.6116L12.3467 642.365L10.3438 644.685L11.3979 649.323V653.223L13.0846 657.124L14.3495 661.551H11.3979L9.60588 663.238H7.18133L5.81094 664.713L1.48893 663.238L-1.4628 664.713L-4.83597 663.976L-6.31177 665.557L-7.04968 668.508L-9.36881 667.771V670.933H-12.215L-13.5852 672.62L-16.4316 673.252L-12.215 677.785L-9.81216 684.493L-11.7568 687.199L-11.0557 690.435L-16.4316 693.386L-17.9074 696.127L-19.4883 698.868L-18.6455 701.081L-17.2526 704.363L-18.6455 707.153L-16.4316 711.042L-13.5852 712.361V715.207L-10.423 716.472L-9.81216 719.497L-7.04968 721.005L-4.06271 720.162L-2.37169 722.119Z"
+                stroke="#FFAA00" stroke-width="3" mask="url(#path-1-outside-1_8050_4556)" />
+            </svg>
+
+            <div class="infos" id="scene-4-infos">
+              <div class="info" data-target-id="1">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Dark Mushrooms</div>
+                    <div class="t2">Massive native fungi found throughout this layer. Their
+                      interiors sometimes contain Shroomlight - the essence of glowing
+                      mushrooms, serving as food for some creatures and as a gentle source of warm light for humans.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="2">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Destroyed Hoverbike</div>
+                    <div class="t2">The remains of a crashed vehicle, hinting at an unfortunate
+                      accident. There’s a chance its anti-gravity module is still
+                      functional.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="3">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Teseranids</div>
+                    <div class="t2">Insect-like hive creatures that are highly aggressive and
+                      organized into a strict hierarchy. Their swarm includes
+                      workers, scouts, guards, and hunters. Beyond consuming flesh, they are drawn to certain metals,
+                      using a unique digestive
+                      system that produces Nihonium as a byproduct.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="4">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Erebite</div>
+                    <div class="t2">A very durable black stone native to the Ereb layer. On rare
+                      occasions, a shimmering variant can be found, marked by
+                      faintly glowing inclusions. Formed under layers of volcanic ash, this variant emerges only where
+                      residual heat and
+                      pressure remain trapped deep below the surface.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="5">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Glowstone Ore</div>
+                    <div class="t2">A mysterious glowing mineral that emits light and possesses
+                      unusual properties. Rumors suggest it can split atoms and
+                      reassemble them in the same arrangement.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="info" data-target-id="6">
+                <div class="icon">
+                  <img src="../images/question-icon.svg" alt="tooptip">
+                </div>
+                <div class="popup">
+                  <div class="icon">
+                    <img src="../images/icon.svg" alt="info">
+                  </div>
+                  <div class="content">
+                    <div class="t1">Ereb Pine</div>
+                    <div class="t2">A native wood that emits a faint glow. Its foliage may look
+                      ominous, but it is completely harmless.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <div class="grid">
+          <div class="item top-left">
+            <img src="../images/scene_transition/grid3-image1.avif" alt="Gallery image 1" class="image">
+          </div>
+          <div class="item top-right">
+            <img src="../images/scene_transition/grid3-image2.avif" alt="Gallery image 2" class="image">
+          </div>
+          <div class="item center">
+            <video class="video" autoplay loop muted playsinline preload="metadata">
+              <source data-src="../videos/ereb.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item bottom-left">
+            <img src="../images/scene_transition/grid3-image3.avif" alt="Gallery image 3" class="image">
+          </div>
+          <div class="item bottom-right">
+            <img src="../images/scene_transition/grid3-image4.avif" alt="Gallery image 4" class="image">
+          </div>
+
+        </div>
+      </section>
+
+      <section class="hero-final">
+        <div class="bg">
+          <video autoplay loop muted playsinline preload="metadata">
+            <source data-src="../videos/portal.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="content">
+          <div class="top">
+            <img src="../images/logo4.png" alt="logo" class="logo">
+            <h2 class="title">
+              START YOUR<br>
+              <span class="accent">ADVENTURE!</span>
+            </h2>
+          </div>
+          <div class="buttons">
+            <a href="./roadmap.html" class="btn white">ROADMAP</a>
+            <a href="#" class="btn yellow">JOIN A PLAYTEST</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- =include footer.html -->
+
+  <script src="js/libs.min.js" defer></script>
+  <script src="js/common.min.js" defer></script>
+  <script>
+    // Wait for deferred scripts to load before conditionally loading desktop/mobile
+    window.addEventListener('DOMContentLoaded', function () {
+      const isMobile = window.innerWidth < 768;
+      const scriptSrc = isMobile ? 'js/mobile.min.js' : 'js/desktop.min.js';
+      const script = document.createElement('script');
+      script.src = scriptSrc;
+      document.body.appendChild(script);
+    });
+  </script>
+</body>
+
+</html>

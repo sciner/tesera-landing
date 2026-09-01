@@ -1,0 +1,70 @@
+@import "_mixins";
+
+html {
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+
+  .tablet-up({
+    font-size: 1.1104vw;
+  });
+
+  &:has(body.roadmap) {
+    scroll-behavior: smooth;
+
+    .tablet-up({
+      font-size: 1.1104vw;
+    });
+
+    .xxl-desktop-up({
+      font-size: 1vw;
+    });
+  }
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--mainFont);
+  line-height: 1;
+  color: var(--black);
+  background: linear-gradient(180deg, #99dfef 0%, #aebceb 20%, #aebceb 50%, #040404 55%, #040404 60%, #040404 100%);
+  overflow-x: hidden;
+
+  &.fixed {
+    overflow: hidden;
+  }
+
+}
+
+a {
+  transition: var(--color-transition);
+}
+
+button {
+  transition: var(--default-transition);
+}
+
+path,
+circle {
+  transition: var(--default-transition);
+}
+
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+
+  .tablet-down({
+    padding: 0 1rem;
+  });
+}
+
+
+.white-text {
+  color: #fff;
+}
+
+
+
+.pin-spacer {
+  min-height: 100vh;
+}

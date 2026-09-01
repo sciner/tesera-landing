@@ -1,0 +1,49 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "javascript.format.enable": false,
+  "javascript.validate.enable": false,
+  "files.associations": {
+    "*.js": "javascript",
+    "*.svg": "html"
+  },
+  "files.eol": "\n",
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/dist/**": true,
+    "**/build/**": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "prettier.requireConfig": true,
+  "prettier.useTabs": true,
+  "search.exclude": {
+    "**/app/*.html": true,
+    "**/app/js/*.min.js": true,
+    "**/app/css/*.min.css": true,
+    "**/images/src/**": true
+  },
+  "files.exclude": {
+    "**/app/*.html": true,
+    "**/app/js/*.min.js": true,
+    "**/app/css/*.min.css": true,
+    "**/images/src/**": false
+  }
+}

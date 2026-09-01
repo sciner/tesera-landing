@@ -1,0 +1,85 @@
+@import "_variables";
+
+.font(@family, @weight, @style, @path) {
+  @font-face {
+    font-family: @family;
+    src: url("@{path}.woff2") format("woff2"),
+    url("@{path}.woff") format("woff");
+    font-weight: @weight;
+    font-style: @style;
+    font-display: swap;
+  }
+}
+
+// Media queries
+.mobile-only(@rules) {
+  @media (max-width: @{breakpoint-xs}) {
+    @rules();
+  }
+}
+
+.large-mobile-down(@rules) {
+  @media (max-width: @{breakpoint-sm}) {
+    @rules();
+  }
+}
+
+.large-mobile-up(@rules) {
+  @media (min-width: @breakpoint-sm + 1px) {
+    @rules();
+  }
+}
+
+.tablet-down(@rules) {
+  @media (max-width: @{breakpoint-md}) {
+    @rules();
+  }
+}
+
+.tablet-up(@rules) {
+  @media (min-width: @breakpoint-md + 1px) {
+    @rules();
+  }
+}
+
+.small-desktop-down(@rules) {
+  @media (max-width: @{breakpoint-900}) {
+    @rules();
+  }
+}
+
+.small-desktop-up(@rules) {
+  @media (min-width: @breakpoint-900 + 1px) {
+    @rules();
+  }
+}
+
+.desktop-down(@rules) {
+  @media (max-width: @{breakpoint-lg}) {
+    @rules();
+  }
+}
+
+.desktop-up(@rules) {
+  @media (min-width: @breakpoint-lg + 1px) {
+    @rules();
+  }
+}
+
+.large-desktop-up(@rules) {
+  @media (min-width: @breakpoint-xl + 1px) {
+    @rules();
+  }
+}
+
+.large-desktop-down(@rules) {
+  @media (max-width: @{breakpoint-xl}) {
+    @rules();
+  }
+}
+
+.xxl-desktop-up(@rules) {
+  @media (min-width: @breakpoint-2xl + 1px) {
+    @rules();
+  }
+}
