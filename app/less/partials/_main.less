@@ -710,7 +710,8 @@ h1,
         width: 23.75rem;
         height: max-content;
         border-radius: 0.5rem;
-        background: rgba(9, 24, 34, 0.85);
+        background: rgba(9, 24, 34, 0.75);
+        backdrop-filter: blur(0.25rem);
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
@@ -719,7 +720,7 @@ h1,
         .hud-glow();
 
         .tablet-up({
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 1.5rem 100%, 1.5rem var(--clip-y1, 8.75rem), 0% var(--clip-y2, 11.25rem));
+            clip-path: polygon(2.625rem 0%, 100% 0%, 100% 100%, 1.5rem 100%, 1.5rem var(--clip-y1, 4.125rem), 0% var(--clip-y2, 2.625rem));
         });
 
     .tablet-down({
@@ -743,7 +744,7 @@ h1,
     top: -1.25rem;
     right: -1.25rem;
     transform: translateX(calc(-100% + 5.25rem));
-    clip-path: polygon(0% 0%, 100% 0%, 100% var(--clip-y2, 8.75rem), calc(100% - 1.5rem) var(--clip-y1, 10rem), calc(100% - 1.5rem) 100%, 0% 100%);
+    clip-path: polygon(0% 0%, calc(100% - 2.625rem) 0%, 100% var(--clip-y2, 2.625rem), calc(100% - 1.5rem) var(--clip-y1, 4.125rem), calc(100% - 1.5rem) 100%, 0% 100%);
 
 }
 
@@ -1629,6 +1630,7 @@ img {
     pointer-events: all;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     .hud-panel();
+    backdrop-filter: blur(0.75rem);
 
     &.visible {
         opacity: 1;
@@ -1645,6 +1647,13 @@ img {
         font-weight: 700;
         line-height: 1.75rem;
         .hud-title();
+    }
+
+    .tier {
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 113%;
+        color: #fff;
     }
 
     .t2 {
