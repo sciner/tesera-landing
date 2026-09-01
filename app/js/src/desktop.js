@@ -4,8 +4,9 @@ const container = document.querySelector('.main-container.desktop');
 function updateClipPath() {
   container.querySelectorAll('.popup').forEach((popup) => {
     const height = popup.offsetHeight;
-    const y1 = Math.max(140, Math.min(height / 2 - 10, 140));
-    const y2 = Math.max(100, Math.min(height / 2 - 10, 100));
+    // вырез не ниже середины попапа; капы в rem, т.к. вся вёрстка масштабируется от vw
+    const y1 = Math.min(height / 2 - 10, 8.75 * REM);
+    const y2 = Math.min(height / 2 - 10, 6.25 * REM);
     popup.style.setProperty('--clip-y1', `${y1}px`);
     popup.style.setProperty('--clip-y2', `${y2}px`);
   });
@@ -93,11 +94,11 @@ function initSvgHoverInfo() {
 
     const isActive = targetInfo.classList.contains('active');
 
-    // Close all other popups in the same scene
+    // Close all other popups, including ones opened in other scenes
     activePopups.forEach((data, key) => {
-      if (data.sceneId === sceneId && key !== targetId) {
-        const otherInfo = sceneElement.querySelector(`.info[data-target-id="${key}"]`);
-        const otherCharItems = sceneElement.querySelectorAll(`.char-item[data-target-id="${key}"]`);
+      if (key !== targetId) {
+        const otherInfo = data.sceneElement.querySelector(`.info[data-target-id="${key}"]`);
+        const otherCharItems = data.sceneElement.querySelectorAll(`.char-item[data-target-id="${key}"]`);
         otherInfo?.classList.remove('active');
         otherCharItems.forEach((item) => {
           item.classList.remove('visible');
@@ -222,12 +223,13 @@ function initScene1Animation() {
 }
 
 function initSceneTransition() {
+  // start как функция — пересчитывается на каждом ScrollTrigger.refresh с актуальным VH
   gsap.to(container.querySelector('.scene-transition .clouds-back'), {
     y: '-20%',
     ease: 'none',
     scrollTrigger: {
       trigger: container.querySelector('.scene-transition'),
-      start: `top bottom+=${10 * VH}`,
+      start: () => `top bottom+=${10 * VH}`,
       end: `bottom top`,
       scrub: true,
     },
@@ -237,7 +239,7 @@ function initSceneTransition() {
     ease: 'none',
     scrollTrigger: {
       trigger: container.querySelector('.scene-transition'),
-      start: `top bottom+=${15 * VH}`,
+      start: () => `top bottom+=${15 * VH}`,
       end: `bottom top`,
       scrub: true,
     },
@@ -254,7 +256,6 @@ function initScene2Animation() {
     start: 'top bottom',
     end: `bottom top`,
     scrub: true,
-    anticipatePin: 1,
     onEnter: () => {
       if (levelAnimation) {
         levelAnimation.activateStep();
@@ -268,10 +269,7 @@ function initScene2Animation() {
     onUpdate: (self) => {
       const progress = self.progress;
       if (levelAnimation) {
-        const { start, end } = levelAnimation.progressRange;
-        if (progress >= start && progress <= end) {
-          levelAnimation.updateProgress(progress);
-        }
+        levelAnimation.updateProgress(progress);
       }
       toggleFlag(scene2Svg, 'svg-active', progress >= 0.1 && progress <= 0.85);
     },
@@ -301,7 +299,6 @@ function initScene3Animation() {
     start: `top bottom`,
     end: `bottom top`,
     scrub: true,
-    anticipatePin: 1,
     // invalidateOnRefresh: true, // Закоментовано для оптимізації продуктивності
     // fastScrollEnd: true, // Закоментовано для оптимізації продуктивності
     onEnter: () => {
@@ -318,10 +315,7 @@ function initScene3Animation() {
       const progress = self.progress;
 
       if (levelAnimation) {
-        const { start, end } = levelAnimation.progressRange;
-        if (progress >= start && progress <= end) {
-          levelAnimation.updateProgress(progress);
-        }
+        levelAnimation.updateProgress(progress);
       }
     },
   });
@@ -341,7 +335,7 @@ function initScene3Animation() {
     scrollTrigger: {
       trigger: container.querySelector('.scene-3'),
       start: `top bottom`,
-      end: `bottom bottom-=${300 * VH}`,
+      end: 'bottom bottom',
       scrub: true,
     },
   });
@@ -362,7 +356,6 @@ function initScene4Animation() {
     start: `top bottom `,
     end: `bottom top`,
     scrub: true,
-    anticipatePin: 1,
     onEnter: () => {
       if (levelAnimation) {
         levelAnimation.activateStep();

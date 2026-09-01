@@ -63,6 +63,7 @@ function initSvgClickInfo() {
                   mobilePortal?.appendChild(popupElement);
                   mobilePortal?.classList.add('active');
                   targetInfo.classList.add('active');
+                  document.body.style.overflow = 'hidden';
 
                   // Add visible class to char-item
                   if (targetCharItem) {
@@ -135,7 +136,10 @@ function initSvgClickInfo() {
         setTimeout(() => {
           // Move popup back to its original parent using saved reference
           savedParent.appendChild(popupElement);
-          mobilePortal.classList.remove('active');
+          // за 300ms мог открыться другой попап — тогда портал гасить нельзя
+          if (!mobilePortal.querySelector('.popup')) {
+            mobilePortal.classList.remove('active');
+          }
         }, 300); // Match CSS transition duration
       } else {
         mobilePortal.classList.remove('active');
@@ -163,7 +167,6 @@ function initScene1Animation() {
     start: 'top top',
     end: `bottom top`,
     scrub: true,
-    anticipatePin: 1,
     onEnter: () => {
       if (levelAnimation) {
         levelAnimation.activateStep();
@@ -204,7 +207,7 @@ function initScene1Animation() {
     scrollTrigger: {
       trigger: container.querySelector('.hero-scene'),
       start: 'top top',
-      end: `bottom bottom-=${100 * VH}`,
+      end: () => `bottom bottom-=${100 * VH}`,
       scrub: true,
     },
   });
@@ -241,7 +244,7 @@ function initSceneTransitionMobile() {
     scrollTrigger: {
       trigger: container.querySelector('.scene-transition'),
       start: 'top bottom',
-      end: `bottom bottom-=${10 * VH}`,
+      end: () => `bottom bottom-=${10 * VH}`,
       scrub: true,
     },
   });
@@ -258,7 +261,6 @@ function initScene2Animation() {
     start: `top bottom`,
     end: `bottom top`,
     scrub: true,
-    anticipatePin: 1,
     // invalidateOnRefresh: true, // Закоментовано для оптимізації продуктивності
     // fastScrollEnd: true, // Закоментовано для оптимізації продуктивності
     onEnter: () => {
@@ -312,7 +314,6 @@ function initScene3Animation() {
     start: `top bottom`,
     end: `bottom top`,
     scrub: true,
-    anticipatePin: 1,
     // invalidateOnRefresh: true, // Закоментовано для оптимізації продуктивності
     // fastScrollEnd: true, // Закоментовано для оптимізації продуктивності
     onEnter: () => {
@@ -359,7 +360,6 @@ function initScene4Animation() {
     start: `top bottom `,
     end: `bottom top`,
     scrub: true,
-    anticipatePin: 1,
     // invalidateOnRefresh: true, // Закоментовано для оптимізації продуктивності
     // fastScrollEnd: true, // Закоментовано для оптимізації продуктивності
     onEnter: () => {

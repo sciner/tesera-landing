@@ -46,7 +46,12 @@ class VideoPopup {
     this.root.setAttribute('aria-hidden', 'true')
     document.body.classList.remove('fixed')
     document.removeEventListener('keydown', this.onKeydown)
-    this.frame_box.innerHTML = ''
+    // даём фейду закрытия доиграть, потом убиваем плеер, чтобы звук остановился
+    window.setTimeout(() => {
+      if (!this.root.classList.contains('show')) {
+        this.frame_box.innerHTML = ''
+      }
+    }, 400)
   }
 
   onKeydown(event) {

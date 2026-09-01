@@ -89,37 +89,6 @@ function initCookiePopup() {
   });
 }
 
-// Slow down scroll speed for smoother experience
-function initSlowScroll() {
-  let scrollSpeed = 0.9;
-  let isScrolling = false;
-
-  window.addEventListener(
-    'wheel',
-    (e) => {
-      if (isScrolling) {
-        e.preventDefault();
-        return;
-      }
-
-      const deltaY = e.deltaY * scrollSpeed;
-
-      e.preventDefault();
-
-      isScrolling = true;
-      window.scrollBy({
-        top: deltaY,
-        behavior: 'auto',
-      });
-
-      setTimeout(() => {
-        isScrolling = false;
-      }, 16);
-    },
-    { passive: false }
-  );
-}
-
 // Update on resize with debounce
 const handleResize = debounce(() => {
   VH = window.innerHeight / 100;
@@ -353,7 +322,7 @@ function initRoadmapNavigation() {
         steps[index]?.classList.add('active');
 
         stageBgs.forEach((bg, idx) => {
-          gsap.to(bg, { opacity: idx === index ? 1 : 0 });
+          gsap.to(bg, { opacity: idx === index ? 1 : 0, overwrite: 'auto' });
         });
       },
       onEnterBack: () => {
@@ -361,7 +330,7 @@ function initRoadmapNavigation() {
         steps[index]?.classList.add('active');
 
         stageBgs.forEach((bg, idx) => {
-          gsap.to(bg, { opacity: idx === index ? 1 : 0 });
+          gsap.to(bg, { opacity: idx === index ? 1 : 0, overwrite: 'auto' });
         });
       },
     });
@@ -492,8 +461,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initCookiePopup();
 
-  // initSlowScroll(); // Slow down overall page scroll
-
   // Refresh ScrollTrigger after all images load
   window.addEventListener(
     'load',
@@ -520,7 +487,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const hash = window.location.hash;
         const target = document.querySelector(hash);
         if (target) {
-          window.scrollTo(0, target.offsetTop);
+          // offsetTop считается от offsetParent, а не от документа — берём реальную позицию
+          window.scrollTo(0, target.getBoundingClientRect().top + window.scrollY);
 
           setTimeout(() => {
             document.documentElement.style.scrollBehavior = 'smooth';
