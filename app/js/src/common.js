@@ -124,6 +124,7 @@ function initSlowScroll() {
 const handleResize = debounce(() => {
   VH = window.innerHeight / 100;
   REM = parseFloat(getComputedStyle(document.documentElement).fontSize);
+  refreshLevelLabels();
   ScrollTrigger.refresh();
   if (typeof updateClipPath === 'function') {
     updateClipPath();
@@ -205,6 +206,15 @@ function updateTierDisplay(sceneNumber) {
   });
 }
 
+const level_label_anims = [];
+
+function refreshLevelLabels() {
+  level_label_anims.forEach((anim) => {
+    anim.timeline.invalidate();
+    anim.sync();
+  });
+}
+
 function initLevelLabelAnimation(sceneNumber, yOffset, progressRange = { start: 0.55, end: 0.7 }) {
   const container = getActiveContainer();
   const stepLabels = document.querySelectorAll('.fixed-panels .step');
@@ -213,8 +223,8 @@ function initLevelLabelAnimation(sceneNumber, yOffset, progressRange = { start: 
   if (!bigLevelLabel) return null;
 
   const stepIndex = sceneNumber - 1;
+  let last_progress = 0;
 
-  // Helper function to activate current step and tier
   const activateStep = () => {
     stepLabels.forEach((label) => label.classList.remove('active'));
     if (stepLabels[stepIndex]) {
@@ -223,29 +233,38 @@ function initLevelLabelAnimation(sceneNumber, yOffset, progressRange = { start: 
     updateTierDisplay(sceneNumber);
   };
 
-  // Create timeline without callbacks (they don't belong here)
+  // y in px from current rem — rem is vw-based, so it must be read on each invalidate
   const tlLabel = gsap
     .timeline({
       paused: true,
     })
     .to(bigLevelLabel, {
-      y: `-${yOffset * REM}`,
+      y: () => -yOffset * REM,
       ease: 'none',
       duration: 1,
     });
 
-  return {
+  const updateProgress = (progress) => {
+    last_progress = progress;
+    const { start, end } = progressRange;
+    const local = (progress - start) / (end - start);
+    const clamped = Math.max(0, Math.min(1, local));
+    tlLabel.progress(clamped);
+  };
+
+  const anim = {
     trigger: container.querySelector(`.scene-${sceneNumber}`),
     timeline: tlLabel,
     progressRange: progressRange,
-    activateStep: activateStep, // Expose the activation function
-    updateProgress: (progress) => {
-      const { start, end } = progressRange;
-      const local = (progress - start) / (end - start);
-      const clamped = Math.max(0, Math.min(1, local));
-      tlLabel.progress(clamped);
+    activateStep: activateStep,
+    updateProgress: updateProgress,
+    sync: () => {
+      updateProgress(last_progress);
     },
   };
+
+  level_label_anims.push(anim);
+  return anim;
 }
 
 function animateHero() {
