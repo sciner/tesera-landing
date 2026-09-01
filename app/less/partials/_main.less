@@ -202,6 +202,8 @@ span {
     .gradient {
         opacity: 1;
         visibility: visible;
+        will-change: transform;
+        animation: spin 3s linear infinite;
     }
 
     .text {
@@ -243,11 +245,9 @@ span {
             #FA0 0.2turn,
             #FA0 0.35turn,
             #031E33 0.95turn);
-    will-change: transform;
-    animation: spin 3s linear infinite;
     opacity: 0;
     visibility: hidden;
-    transition: all .3s;
+    transition: opacity .3s, visibility .3s;
     contain: strict;
 
     .tablet-down({
@@ -544,6 +544,9 @@ h1,
     justify-content: center;
     align-items: flex-end;
     pointer-events: none;
+}
+
+.is-live .parallax-layer {
     will-change: transform;
 }
 
@@ -607,6 +610,7 @@ h1,
 
     img {
         position: relative;
+        width: 100%;
 
         &:nth-child(1) {
             top: 1px;
@@ -633,7 +637,7 @@ h1,
     display: flex;
     justify-content: center;
     z-index: 1;
-    transition: opacity 1s;
+    transition: opacity 0.3s;
 
     &.svg-active {
         pointer-events: auto;
@@ -641,9 +645,6 @@ h1,
         opacity: 1;
         visibility: visible;
 
-        .char-item {
-            animation: 1s charAnimation alternate infinite;
-        }
     }
 
     svg {
@@ -1034,6 +1035,10 @@ img {
 .scene-3 {
     background: #040404;
 
+    .main-layer img {
+        aspect-ratio: 2160 / 3840;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -1169,6 +1174,10 @@ img {
 
 .scene-4 {
     background: #040404;
+
+    .main-layer img {
+        aspect-ratio: 2160 / 3840;
+    }
 
     &::before {
         content: '';
@@ -1861,7 +1870,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('../images/404-bg.avif');
+    background-image: url('../images/404-bg.webp');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;

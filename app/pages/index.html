@@ -23,33 +23,32 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
   <link rel="manifest" href="site.webmanifest" />
   <!-- Preload critical images -->
-  <link rel="preload" href="../images/logo4.png" as="image" type="image/avif">
+  <link rel="preload" href="../images/logo4.png" as="image" type="image/webp">
   <link rel="preload" href="../images/question-icon.svg" as="image" type="image/svg+xml">
   <!-- Preload critical scene 1 images -->
-  <link rel="preload" href="../images/scene_1/part-1.avif" as="image" type="image/avif" media="(min-width: 769px)">
-  <link rel="preload" href="../images/scene_1/part-2.avif" as="image" type="image/avif" media="(min-width: 769px)">
-  <link rel="preload" href="../images/scene_1/part-3.avif" as="image" type="image/avif" media="(min-width: 769px)">
+  <link rel="preload" href="../images/scene_1/part-1.webp" as="image" type="image/webp" media="(min-width: 769px)">
+  <link rel="preload" href="../images/scene_1/part-2.webp" as="image" type="image/webp" media="(min-width: 769px)">
+  <link rel="preload" href="../images/scene_1/part-3.webp" as="image" type="image/webp" media="(min-width: 769px)">
 
   <!-- Preload scene transition images -->
-  <link rel="preload" href="../images/scene_transition/clouds_back.avif" as="image" type="image/avif"
+  <link rel="preload" href="../images/scene_transition/clouds_back.webp" as="image" type="image/webp"
     media="(min-width: 769px)">
-  <link rel="preload" href="../images/scene_transition/clouds_back_mobile.avif" as="image" type="image/avif"
+  <link rel="preload" href="../images/scene_transition/clouds_back_mobile.webp" as="image" type="image/webp"
     media="(max-width: 768px)">
-  <link rel="preload" href="../images/scene_transition/clouds_front.avif" as="image" type="image/avif"
+  <link rel="preload" href="../images/scene_transition/clouds_front.webp" as="image" type="image/webp"
     media="(min-width: 769px)">
-  <link rel="preload" href="../images/scene_transition/clouds_front_mobile.avif" as="image" type="image/avif"
+  <link rel="preload" href="../images/scene_transition/clouds_front_mobile.webp" as="image" type="image/webp"
     media="(max-width: 768px)">
   <!-- Preload critical scene 2 images -->
-  <link rel="preload" href="../images/scene_2/test-part-1.avif" as="image" type="image/avif" media="(min-width: 769px)">
-  <link rel="preload" href="../images/scene_2/test-part-2.avif" as="image" type="image/avif" media="(min-width: 769px)">
-  <link rel="preload" href="../images/scene_2/test-part-3.avif" as="image" type="image/avif" media="(min-width: 769px)">
-  <link rel="preload" href="../images/scene_2/test-part-4.avif" as="image" type="image/avif" media="(min-width: 769px)">
+  <link rel="preload" href="../images/scene_2/main-island.webp" as="image" type="image/webp" media="(min-width: 769px)">
+  <link rel="preload" href="../images/scene_3/3_plan.webp" as="image" type="image/webp" media="(min-width: 769px)">
+  <link rel="preload" href="../images/scene_4/2_plan.webp" as="image" type="image/webp" media="(min-width: 769px)">
   <!-- Preload scene 2, 3, 4 images for better performance -->
-  <link rel="preload" href="../images/scene_2/main-island_mobile.avif" as="image" type="image/avif"
+  <link rel="preload" href="../images/scene_2/main-island_mobile.webp" as="image" type="image/webp"
     media="(max-width: 768px)">
-  <link rel="preload" href="../images/scene_3/3_plan_mobile.avif" as="image" type="image/avif"
+  <link rel="preload" href="../images/scene_3/3_plan_mobile.webp" as="image" type="image/webp"
     media="(max-width: 768px)">
-  <link rel="preload" href="../images/scene_4/2_plan_mobile.avif" as="image" type="image/avif"
+  <link rel="preload" href="../images/scene_4/2_plan_mobile.webp" as="image" type="image/webp"
     media="(max-width: 768px)">
 </head>
 
@@ -89,10 +88,10 @@
     </div>
     <div class="levels">
       <div class="image">
-        <img class="tier-image tier-1" src="../images/icons/tier-4-1.avif" alt="sword">
-        <img class="tier-image tier-2" src="../images/icons/tier-1-2.avif" alt="sword">
-        <img class="tier-image tier-3" src="../images/icons/tier-3.avif" alt="sword">
-        <img class="tier-image tier-4" src="../images/icons/tier-4-2.avif" alt="sword">
+        <img class="tier-image tier-1" src="../images/icons/tier-4-1.webp" alt="sword">
+        <img class="tier-image tier-2" src="../images/icons/tier-1-2.webp" alt="sword">
+        <img class="tier-image tier-3" src="../images/icons/tier-3.webp" alt="sword">
+        <img class="tier-image tier-4" src="../images/icons/tier-4-2.webp" alt="sword">
       </div>
       <div class="text">
         <span class="tier-level">4</span>
@@ -103,7 +102,7 @@
   <main>
     <template id="landing-desktop">
       <div class="main-container desktop">
-        <section class="scene hero-scene">
+        <section class="scene hero-scene is-live">
           <div class="hero">
             <div class="logo">
               <img src="../images/logo4.png" alt="logo" fetchpriority="high">
@@ -120,7 +119,7 @@
             </div>
           </div>
           <div class="parallax-layer clouds-front">
-            <img src="../images/scene_1/front-big-clouds.avif" alt="">
+            <img src="../images/scene_1/front-big-clouds.webp" alt="">
           </div>
         </section>
 
@@ -133,18 +132,18 @@
               an unknown civilization. Currently considered end-game content.</div>
           </div>
           <div class="parallax-layer clouds-back">
-            <img src="../images/scene_1/clouds_step1.avif" alt="">
+            <img src="../images/scene_1/clouds_step1.webp" alt="">
           </div>
           <div class="parallax-layer islands-back-1">
-            <img src="../images/scene_1/bg-island-2nd-plan.avif" alt="">
+            <img src="../images/scene_1/bg-island-2nd-plan.webp" alt="">
           </div>
           <div class="parallax-layer islands-back-2">
-            <img src="../images/scene_1/bg-island-3rd-plan.avif" alt="">
+            <img src="../images/scene_1/bg-island-3rd-plan.webp" alt="">
           </div>
           <div class="main-layer">
-            <img src="../images/scene_1/part-1.avif" alt="" loading="eager" fetchpriority="high">
-            <img src="../images/scene_1/part-2.avif" alt="" loading="eager" fetchpriority="high">
-            <img src="../images/scene_1/part-3.avif" alt="" loading="eager" fetchpriority="high">
+            <img src="../images/scene_1/part-1.webp" alt="" loading="eager" fetchpriority="high">
+            <img src="../images/scene_1/part-2.webp" alt="" loading="eager" fetchpriority="high">
+            <img src="../images/scene_1/part-3.webp" alt="" loading="eager" fetchpriority="high">
             <div class="scene-svg">
               <svg viewBox="0 0 1440 484" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path data-target-id="1" class="char-item"
@@ -277,10 +276,10 @@
 
         <section class="scene scene-transition">
           <div class="parallax-layer clouds-back">
-            <img src="../images/scene_transition/clouds_back.avif" alt="" loading="lazy">
+            <img src="../images/scene_transition/clouds_back.webp" alt="" loading="lazy">
           </div>
           <div class="parallax-layer clouds-front">
-            <img src="../images/scene_transition/clouds_front.avif" alt="" loading="lazy">
+            <img src="../images/scene_transition/clouds_front.webp" alt="" loading="lazy">
           </div>
         </section>
 
@@ -293,13 +292,10 @@
               exploration to deadly encounters.</div>
           </div>
           <div class="parallax-layer islands-back-2">
-            <img src="../images/scene_2/bg-island-3rd-plan.avif" alt="">
+            <img src="../images/scene_2/bg-island-3rd-plan.webp" alt="">
           </div>
           <div class="main-layer">
-            <img src="../images/scene_2/test-part-1.avif" alt="" loading="lazy">
-            <img src="../images/scene_2/test-part-2.avif" alt="" loading="lazy">
-            <img src="../images/scene_2/test-part-3.avif" alt="" loading="lazy">
-            <img src="../images/scene_2/test-part-4.avif" alt="" loading="lazy">
+            <img src="../images/scene_2/main-island.webp" alt="" loading="lazy">
             <div class="scene-svg">
               <svg viewBox="0 0 1440 1517" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="char-item" data-target-id="1"
@@ -559,13 +555,13 @@
                         <div class="splide__track">
                           <ul class="splide__list">
                             <li class="splide__slide"><img loading="lazy" decoding="async"
-                                src="../images/scene_2/slider1-slide1.avif" alt="" class="slide_image"></li>
+                                src="../images/scene_2/slider1-slide1.webp" alt="" class="slide_image"></li>
                             <li class="splide__slide"><img loading="lazy" decoding="async"
-                                src="../images/scene_2/slider1-slide2.avif" alt="" class="slide_image"></li>
+                                src="../images/scene_2/slider1-slide2.webp" alt="" class="slide_image"></li>
                             <li class="splide__slide"><img loading="lazy" decoding="async"
-                                src="../images/scene_2/slider1-slide3.avif" alt="" class="slide_image"></li>
+                                src="../images/scene_2/slider1-slide3.webp" alt="" class="slide_image"></li>
                             <li class="splide__slide"><img loading="lazy" decoding="async"
-                                src="../images/scene_2/slider1-slide4.avif" alt="" class="slide_image"></li>
+                                src="../images/scene_2/slider1-slide4.webp" alt="" class="slide_image"></li>
                           </ul>
                         </div>
                         <div class="splide__arrows">
@@ -624,16 +620,16 @@
         <section class="gallery">
           <div class="grid">
             <div class="item top-left">
-              <img src="../images/scene_transition/grid-image1.avif" alt="Gallery image 1" class="image">
+              <img src="../images/scene_transition/grid-image1.webp" alt="Gallery image 1" class="image">
             </div>
             <div class="item top-right">
-              <img src="../images/scene_transition/grid-image2.avif" alt="Gallery image 2" class="image">
+              <img src="../images/scene_transition/grid-image2.webp" alt="Gallery image 2" class="image">
             </div>
             <div class="item bottom-left">
-              <img src="../images/scene_transition/grid-image3.avif" alt="Gallery image 3" class="image">
+              <img src="../images/scene_transition/grid-image3.webp" alt="Gallery image 3" class="image">
             </div>
             <div class="item bottom-right">
-              <img src="../images/scene_transition/grid-image4.avif" alt="Gallery image 4" class="image">
+              <img src="../images/scene_transition/grid-image4.webp" alt="Gallery image 4" class="image">
             </div>
             <div class="item center">
               <video class="video" autoplay loop muted playsinline preload="metadata">
@@ -652,17 +648,14 @@
           </div>
           <div class="parallax-layer islands-back-2">
             <div>
-              <img src="../images/scene_3/Rocks_01.avif" alt="">
-              <img src="../images/scene_3/Rocks_02.avif" alt="">
-              <img src="../images/scene_3/Rocks_03.avif" alt="">
-              <img src="../images/scene_3/Rocks_04.avif" alt="">
+              <img src="../images/scene_3/Rocks_01.webp" alt="">
+              <img src="../images/scene_3/Rocks_02.webp" alt="">
+              <img src="../images/scene_3/Rocks_03.webp" alt="">
+              <img src="../images/scene_3/Rocks_04.webp" alt="">
             </div>
           </div>
           <div class="main-layer">
-            <img src="../images/scene_3/test-part-1.avif" alt="" loading="lazy">
-            <img src="../images/scene_3/test-part-2.avif" alt="" loading="lazy">
-            <img src="../images/scene_3/test-part-3.avif" alt="" loading="lazy">
-            <img src="../images/scene_3/test-part-4.avif" alt="" loading="lazy">
+            <img src="../images/scene_3/3_plan.webp" alt="" loading="lazy">
             <div class="scene-svg">
               <svg viewBox="0 0 1440 1736" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="char-item" data-target-id="1"
@@ -832,13 +825,13 @@
                         <div class="splide__track">
                           <ul class="splide__list">
                             <li class="splide__slide"><img loading="lazy" decoding="async"
-                                src="../images/scene_3/slider1-slide1.avif" alt="" class="slide_image"></li>
+                                src="../images/scene_3/slider1-slide1.webp" alt="" class="slide_image"></li>
                             <li class="splide__slide"><img loading="lazy" decoding="async"
-                                src="../images/scene_3/slider1-slide2.avif" alt="" class="slide_image"></li>
+                                src="../images/scene_3/slider1-slide2.webp" alt="" class="slide_image"></li>
                             <li class="splide__slide"><img loading="lazy" decoding="async"
-                                src="../images/scene_3/slider1-slide3.avif" alt="" class="slide_image"></li>
+                                src="../images/scene_3/slider1-slide3.webp" alt="" class="slide_image"></li>
                             <li class="splide__slide"><img loading="lazy" decoding="async"
-                                src="../images/scene_3/slider1-slide4.avif" alt="" class="slide_image"></li>
+                                src="../images/scene_3/slider1-slide4.webp" alt="" class="slide_image"></li>
                           </ul>
                         </div>
                         <div class="splide__arrows">
@@ -972,16 +965,16 @@
         <section class="gallery">
           <div class="grid">
             <div class="item top-left">
-              <img src="../images/scene_transition/grid2-image1.avif" alt="Gallery image 1" class="image">
+              <img src="../images/scene_transition/grid2-image1.webp" alt="Gallery image 1" class="image">
             </div>
             <div class="item top-right">
-              <img src="../images/scene_transition/grid2-image2.avif" alt="Gallery image 2" class="image">
+              <img src="../images/scene_transition/grid2-image2.webp" alt="Gallery image 2" class="image">
             </div>
             <div class="item bottom-left">
-              <img src="../images/scene_transition/grid2-image3.avif" alt="Gallery image 3" class="image">
+              <img src="../images/scene_transition/grid2-image3.webp" alt="Gallery image 3" class="image">
             </div>
             <div class="item bottom-right">
-              <img src="../images/scene_transition/grid2-image4.avif" alt="Gallery image 4" class="image">
+              <img src="../images/scene_transition/grid2-image4.webp" alt="Gallery image 4" class="image">
             </div>
             <div class="item center">
               <video class="video" autoplay loop muted playsinline preload="metadata">
@@ -1003,17 +996,14 @@
           </div>
           <div class="parallax-layer islands-back-2">
             <div>
-              <img src="../images/scene_4/test-back-1.avif" alt="">
-              <img src="../images/scene_4/test-back-2.avif" alt="">
-              <img src="../images/scene_4/test-back-3.avif" alt="">
-              <img src="../images/scene_4/test-back-4.avif" alt="">
+              <img src="../images/scene_4/test-back-1.webp" alt="">
+              <img src="../images/scene_4/test-back-2.webp" alt="">
+              <img src="../images/scene_4/test-back-3.webp" alt="">
+              <img src="../images/scene_4/test-back-4.webp" alt="">
             </div>
           </div>
           <div class="main-layer">
-            <img src="../images/scene_4/test-part-1.avif" alt="" loading="lazy">
-            <img src="../images/scene_4/test-part-2.avif" alt="" loading="lazy">
-            <img src="../images/scene_4/test-part-3.avif" alt="" loading="lazy">
-            <img src="../images/scene_4/test-part-4.avif" alt="" loading="lazy">
+            <img src="../images/scene_4/2_plan.webp" alt="" loading="lazy">
             <div class="scene-svg">
               <svg viewBox="0 0 1440 1066" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="char-item" data-target-id="1"
@@ -1185,10 +1175,10 @@
         <section class="gallery">
           <div class="grid">
             <div class="item top-left">
-              <img src="../images/scene_transition/grid3-image1.avif" alt="Gallery image 1" class="image">
+              <img src="../images/scene_transition/grid3-image1.webp" alt="Gallery image 1" class="image">
             </div>
             <div class="item top-right">
-              <img src="../images/scene_transition/grid3-image2.avif" alt="Gallery image 2" class="image">
+              <img src="../images/scene_transition/grid3-image2.webp" alt="Gallery image 2" class="image">
             </div>
             <div class="item center">
               <video class="video" autoplay loop muted playsinline preload="metadata">
@@ -1196,10 +1186,10 @@
               </video>
             </div>
             <div class="item bottom-left">
-              <img src="../images/scene_transition/grid3-image3.avif" alt="Gallery image 3" class="image">
+              <img src="../images/scene_transition/grid3-image3.webp" alt="Gallery image 3" class="image">
             </div>
             <div class="item bottom-right">
-              <img src="../images/scene_transition/grid3-image4.avif" alt="Gallery image 4" class="image">
+              <img src="../images/scene_transition/grid3-image4.webp" alt="Gallery image 4" class="image">
             </div>
 
           </div>
@@ -1230,7 +1220,7 @@
 
     <template id="landing-mobile">
       <div class="main-container mobile">
-        <section class="scene hero-scene">
+        <section class="scene hero-scene is-live">
           <div class="hero">
             <div class="logo">
               <img src="../images/logo4.png" alt="logo" fetchpriority="high">
@@ -1246,7 +1236,7 @@
             </div>
           </div>
           <div class="parallax-layer clouds-front">
-            <img src="../images/scene_1/front-big-clouds_mobile.avif" alt="">
+            <img src="../images/scene_1/front-big-clouds_mobile.webp" alt="">
           </div>
         </section>
 
@@ -1259,14 +1249,14 @@
               an unknown civilization. Currently considered end-game content.</div>
           </div>
           <div class="parallax-layer clouds-back">
-            <img src="../images/scene_1/clouds_step1_mobile.avif" alt="">
+            <img src="../images/scene_1/clouds_step1_mobile.webp" alt="">
           </div>
 
           <div class="parallax-layer islands-back-2">
-            <img src="../images/scene_1/bg-island-3rd-plan_mobile.avif" alt="">
+            <img src="../images/scene_1/bg-island-3rd-plan_mobile.webp" alt="">
           </div>
           <div class="main-layer">
-            <img src="../images/scene_1/main-island_mobile.avif" alt="" fetchpriority="high">
+            <img src="../images/scene_1/main-island_mobile.webp" alt="" fetchpriority="high">
             <div class="scene-svg">
               <svg viewBox="0 0 375 330" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="char-item" data-target-id="1"
@@ -1365,10 +1355,10 @@
 
         <section class="scene scene-transition">
           <div class="parallax-layer clouds-back">
-            <img src="../images/scene_transition/clouds_back_mobile.avif" alt="">
+            <img src="../images/scene_transition/clouds_back_mobile.webp" alt="">
           </div>
           <div class="parallax-layer clouds-front">
-            <img src="../images/scene_transition/clouds_front_mobile.avif" alt="">
+            <img src="../images/scene_transition/clouds_front_mobile.webp" alt="">
           </div>
         </section>
 
@@ -1381,10 +1371,10 @@
               exploration to deadly encounters.</div>
           </div>
           <div class="parallax-layer islands-back-2">
-            <img src="../images/scene_2/bg-island-3rd-plan_mobile.avif" alt="">
+            <img src="../images/scene_2/bg-island-3rd-plan_mobile.webp" alt="">
           </div>
           <div class="main-layer">
-            <img src="../images/scene_2/main-island_mobile.avif" alt="">
+            <img src="../images/scene_2/main-island_mobile.webp" alt="">
             <div class="scene-svg">
               <svg viewBox="0 0 375 840" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="char-item" data-target-id="1"
@@ -1546,13 +1536,13 @@
                         <div class="splide__track">
                           <ul class="splide__list">
                             <li class="splide__slide"><img loading="lazy" decoding="async"
-                                src="../images/scene_2/slider1-slide1.avif" alt="" class="slide_image"></li>
+                                src="../images/scene_2/slider1-slide1.webp" alt="" class="slide_image"></li>
                             <li class="splide__slide"><img loading="lazy" decoding="async"
-                                src="../images/scene_2/slider1-slide2.avif" alt="" class="slide_image"></li>
+                                src="../images/scene_2/slider1-slide2.webp" alt="" class="slide_image"></li>
                             <li class="splide__slide"><img loading="lazy" decoding="async"
-                                src="../images/scene_2/slider1-slide3.avif" alt="" class="slide_image"></li>
+                                src="../images/scene_2/slider1-slide3.webp" alt="" class="slide_image"></li>
                             <li class="splide__slide"><img loading="lazy" decoding="async"
-                                src="../images/scene_2/slider1-slide4.avif" alt="" class="slide_image"></li>
+                                src="../images/scene_2/slider1-slide4.webp" alt="" class="slide_image"></li>
                           </ul>
                         </div>
                         <div class="splide__arrows">
@@ -1575,10 +1565,10 @@
         <section class="gallery">
           <div class="grid">
             <div class="item top-left">
-              <img src="../images/scene_transition/grid-image1.avif" alt="Gallery image 1" class="image">
+              <img src="../images/scene_transition/grid-image1.webp" alt="Gallery image 1" class="image">
             </div>
             <div class="item top-right">
-              <img src="../images/scene_transition/grid-image2.avif" alt="Gallery image 2" class="image">
+              <img src="../images/scene_transition/grid-image2.webp" alt="Gallery image 2" class="image">
             </div>
             <div class="item center">
               <video class="video" autoplay loop muted playsinline preload="metadata">
@@ -1586,10 +1576,10 @@
               </video>
             </div>
             <div class="item bottom-left">
-              <img src="../images/scene_transition/grid-image3.avif" alt="Gallery image 3" class="image">
+              <img src="../images/scene_transition/grid-image3.webp" alt="Gallery image 3" class="image">
             </div>
             <div class="item bottom-right">
-              <img src="../images/scene_transition/grid-image4.avif" alt="Gallery image 4" class="image">
+              <img src="../images/scene_transition/grid-image4.webp" alt="Gallery image 4" class="image">
             </div>
 
           </div>
@@ -1603,7 +1593,7 @@
               and abandoned structures make exploration both rewarding and dangerous.</div>
           </div>
           <div class="main-layer">
-            <img src="../images/scene_3/3_plan_mobile.avif" alt="">
+            <img src="../images/scene_3/3_plan_mobile.webp" alt="">
             <div class="scene-svg">
               <svg viewBox="0 0 375 1186" fill="none" xmlns="http://www.w3.org/2000/svg">
 
@@ -1698,13 +1688,13 @@
                         <div class="splide__track">
                           <ul class="splide__list">
                             <li class="splide__slide"><img loading="lazy" decoding="async"
-                                src="../images/scene_3/slider1-slide1.avif" alt="" class="slide_image"></li>
+                                src="../images/scene_3/slider1-slide1.webp" alt="" class="slide_image"></li>
                             <li class="splide__slide"><img loading="lazy" decoding="async"
-                                src="../images/scene_3/slider1-slide2.avif" alt="" class="slide_image"></li>
+                                src="../images/scene_3/slider1-slide2.webp" alt="" class="slide_image"></li>
                             <li class="splide__slide"><img loading="lazy" decoding="async"
-                                src="../images/scene_3/slider1-slide3.avif" alt="" class="slide_image"></li>
+                                src="../images/scene_3/slider1-slide3.webp" alt="" class="slide_image"></li>
                             <li class="splide__slide"><img loading="lazy" decoding="async"
-                                src="../images/scene_3/slider1-slide4.avif" alt="" class="slide_image"></li>
+                                src="../images/scene_3/slider1-slide4.webp" alt="" class="slide_image"></li>
                           </ul>
                         </div>
                         <div class="splide__arrows">
@@ -1790,10 +1780,10 @@
         <section class="gallery">
           <div class="grid">
             <div class="item top-left">
-              <img src="../images/scene_transition/grid2-image1.avif" alt="Gallery image 1" class="image">
+              <img src="../images/scene_transition/grid2-image1.webp" alt="Gallery image 1" class="image">
             </div>
             <div class="item top-right">
-              <img src="../images/scene_transition/grid2-image2.avif" alt="Gallery image 2" class="image">
+              <img src="../images/scene_transition/grid2-image2.webp" alt="Gallery image 2" class="image">
             </div>
             <div class="item center">
               <video class="video" autoplay loop muted playsinline preload="metadata">
@@ -1801,10 +1791,10 @@
               </video>
             </div>
             <div class="item bottom-left">
-              <img src="../images/scene_transition/grid2-image3.avif" alt="Gallery image 3" class="image">
+              <img src="../images/scene_transition/grid2-image3.webp" alt="Gallery image 3" class="image">
             </div>
             <div class="item bottom-right">
-              <img src="../images/scene_transition/grid2-image4.avif" alt="Gallery image 4" class="image">
+              <img src="../images/scene_transition/grid2-image4.webp" alt="Gallery image 4" class="image">
             </div>
 
           </div>
@@ -1820,7 +1810,7 @@
               after the Great Discharge.</div>
           </div>
           <div class="main-layer">
-            <img src="../images/scene_4/2_plan_mobile.avif" alt="">
+            <img src="../images/scene_4/2_plan_mobile.webp" alt="">
             <div class="scene-svg">
               <svg viewBox="0 0 375 746" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="char-item" data-target-id="1"
@@ -1953,10 +1943,10 @@
         <section class="gallery">
           <div class="grid">
             <div class="item top-left">
-              <img src="../images/scene_transition/grid3-image1.avif" alt="Gallery image 1" class="image">
+              <img src="../images/scene_transition/grid3-image1.webp" alt="Gallery image 1" class="image">
             </div>
             <div class="item top-right">
-              <img src="../images/scene_transition/grid3-image2.avif" alt="Gallery image 2" class="image">
+              <img src="../images/scene_transition/grid3-image2.webp" alt="Gallery image 2" class="image">
             </div>
             <div class="item center">
               <video class="video" autoplay loop muted playsinline preload="metadata">
@@ -1964,10 +1954,10 @@
               </video>
             </div>
             <div class="item bottom-left">
-              <img src="../images/scene_transition/grid3-image3.avif" alt="Gallery image 3" class="image">
+              <img src="../images/scene_transition/grid3-image3.webp" alt="Gallery image 3" class="image">
             </div>
             <div class="item bottom-right">
-              <img src="../images/scene_transition/grid3-image4.avif" alt="Gallery image 4" class="image">
+              <img src="../images/scene_transition/grid3-image4.webp" alt="Gallery image 4" class="image">
             </div>
 
           </div>
@@ -2013,6 +2003,7 @@
 
   <script src="js/libs.min.js" defer></script>
   <script src="js/common.min.js" defer></script>
+  <script src="js/scroll-perf.min.js" defer></script>
   <script>
     // Wait for deferred scripts to load before conditionally loading desktop/mobile
     window.addEventListener('DOMContentLoaded', function () {

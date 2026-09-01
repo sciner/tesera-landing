@@ -417,6 +417,7 @@ function initDesktop() {
   initScene2Animation();
   initScene3Animation();
   initScene4Animation();
+  window.scrollPerf?.bindTriggers();
 }
 
 // Run immediately if DOM is ready, otherwise wait for DOMContentLoaded

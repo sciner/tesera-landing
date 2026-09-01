@@ -190,7 +190,6 @@ function initScene1Animation() {
   gsap.to(container.querySelector('.scene-1 .clouds-back'), {
     y: '20%',
     ease: 'none',
-    force3D: true,
     scrollTrigger: {
       trigger: container.querySelector('.hero-scene'),
       start: 'top top',
@@ -202,7 +201,6 @@ function initScene1Animation() {
   gsap.to(container.querySelector('.hero-scene .clouds-front'), {
     y: '-40%',
     ease: 'none',
-    force3D: true,
     scrollTrigger: {
       trigger: container.querySelector('.hero-scene'),
       start: 'top top',
@@ -214,7 +212,6 @@ function initScene1Animation() {
   gsap.to(container.querySelector('.scene-1 .islands-back-2'), {
     y: '220%',
     ease: 'none',
-    force3D: true,
     scrollTrigger: {
       trigger: container.querySelector('.scene-1'),
       start: `top bottom`,
@@ -241,7 +238,6 @@ function initSceneTransitionMobile() {
   gsap.to(container.querySelector('.scene-transition .clouds-front'), {
     y: '-50%',
     ease: 'none',
-    force3D: true,
     scrollTrigger: {
       trigger: container.querySelector('.scene-transition'),
       start: 'top bottom',
@@ -287,7 +283,6 @@ function initScene2Animation() {
     y: '50%',
     opacity: 0,
     ease: 'none',
-    force3D: true,
     scrollTrigger: {
       trigger: container.querySelector('.scene-2'),
       start: `top bottom`,
@@ -407,6 +402,7 @@ function initMobile() {
   initScene2Animation();
   initScene3Animation();
   initScene4Animation();
+  window.scrollPerf?.bindTriggers();
 }
 
 // Run immediately if DOM is ready, otherwise wait for DOMContentLoaded

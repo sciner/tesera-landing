@@ -131,27 +131,6 @@ const handleResize = debounce(() => {
   }
 }, 250);
 
-function optimizeAnimations() {
-  // Use GSAP's matchMedia for responsive animations
-  ScrollTrigger.matchMedia({
-    // Desktop
-    '(min-width: 1024px)': function () {
-      // Full animations
-      return true;
-    },
-
-    // Mobile - simplified animations
-    '(max-width: 1023px)': function () {
-      // Disable heavy animations on mobile
-      ScrollTrigger.getAll().forEach((st) => {
-        if (st.vars.scrub) {
-          st.vars.scrub = 0.5; // Faster scrub on mobile
-        }
-      });
-    },
-  });
-}
-
 function lazyLoadVideos() {
   const videoObserver = new IntersectionObserver(
     (entries) => {
@@ -324,7 +303,6 @@ function initSceneGalleryTransition() {
     gsap.to(grid, {
       y: '-80%',
       ease: 'none',
-      force3D: true,
       scrollTrigger: {
         trigger: grid,
         start: `top bottom`,
@@ -505,7 +483,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   lazyLoadVideos();
-  optimizeAnimations();
   animateHero();
   initSceneGalleryTransition();
   initRoadmapNavigation();
