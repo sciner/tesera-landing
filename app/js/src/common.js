@@ -311,30 +311,35 @@ function initRoadmapNavigation() {
         },
       });
     }
-
-    // Handle active step and background opacity
-    ScrollTrigger.create({
-      trigger: stage,
-      start: 'top center',
-      end: 'bottom center',
-      onEnter: () => {
-        steps.forEach((step) => step.classList.remove('active'));
-        steps[index]?.classList.add('active');
-
-        stageBgs.forEach((bg, idx) => {
-          gsap.to(bg, { opacity: idx === index ? 1 : 0, overwrite: 'auto' });
-        });
-      },
-      onEnterBack: () => {
-        steps.forEach((step) => step.classList.remove('active'));
-        steps[index]?.classList.add('active');
-
-        stageBgs.forEach((bg, idx) => {
-          gsap.to(bg, { opacity: idx === index ? 1 : 0, overwrite: 'auto' });
-        });
-      },
-    });
   });
+
+  // Активную стадию определяем по живой геометрии на каждом скролле:
+  // событийная модель onEnter/onEnterBack теряла состояние при прыжках
+  // по якорям и после пересчёта позиций (limitCallbacks глушит часть колбэков)
+  let active_index = -1;
+
+  const updateActiveStage = () => {
+    const center = window.innerHeight / 2;
+    let index = 0;
+    roadmapStages.forEach((stage, idx) => {
+      // активна последняя стадия, чей верх поднялся выше середины экрана
+      if (stage.getBoundingClientRect().top <= center) index = idx;
+    });
+
+    if (index === active_index) return;
+    active_index = index;
+
+    steps.forEach((step) => step.classList.remove('active'));
+    steps[index]?.classList.add('active');
+
+    stageBgs.forEach((bg, idx) => {
+      gsap.to(bg, { opacity: idx === index ? 1 : 0, overwrite: 'auto' });
+    });
+  };
+
+  window.addEventListener('scroll', updateActiveStage, { passive: true });
+  window.addEventListener('load', updateActiveStage, { once: true });
+  updateActiveStage();
 
   // Handle arrow animation on last stage
   if (arrow && roadmapStages.length > 0) {
