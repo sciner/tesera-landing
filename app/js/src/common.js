@@ -40,6 +40,12 @@ function getActiveContainer() {
   return desktop || mobile; // Fallback
 }
 
+function toggleFlag(el, class_name, is_on) {
+  if (!el) return;
+  if (el.classList.contains(class_name) === is_on) return;
+  el.classList.toggle(class_name, is_on);
+}
+
 // Debounce resize events
 function debounce(func, wait) {
   let timeout;
@@ -162,10 +168,12 @@ function lazyLoadVideos() {
         }
       });
     },
-    { rootMargin: `${100 * VH}px` }
+    { rootMargin: '200px' }
   );
 
-  document.querySelectorAll('video').forEach((video) => {
+  const container = getActiveContainer();
+  const videos = container ? container.querySelectorAll('video') : [];
+  videos.forEach((video) => {
     videoObserver.observe(video);
   });
 }
@@ -463,8 +471,9 @@ document.addEventListener('DOMContentLoaded', () => {
     syncInterval: 150, // Reduce sync frequency
   });
 
-  // Initialize Splide sliders
-  document.querySelectorAll('.splide').forEach((splideElement) => {
+  const landing = getActiveContainer();
+  const sliders = landing ? landing.querySelectorAll('.splide') : [];
+  sliders.forEach((splideElement) => {
     new Splide(splideElement, {
       type: 'loop',
       perPage: 1,
@@ -493,16 +502,17 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener(
     'load',
     () => {
-      ScrollTrigger.refresh();
+      requestAnimationFrame(() => {
+        ScrollTrigger.refresh();
+      });
 
-      const isLowEnd =
+      const is_low_end =
         navigator.hardwareConcurrency <= 4 ||
         /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
 
-      if (isLowEnd) {
-        // Disable heavy parallax/scroll animations
+      if (is_low_end) {
         ScrollTrigger.getAll().forEach((st) => {
-          if (st.vars.scrub) st.vars.scrub = 0; // Instant, no smooth scrubbing
+          if (st.vars.scrub) st.vars.scrub = 0;
         });
       }
 

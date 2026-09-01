@@ -153,17 +153,10 @@ function initHeroAnimation() {
       end: `bottom top`,
       scrub: true,
       onUpdate: (self) => {
-        const progress = self.progress;
-
-        if (progress >= 1 && header) {
-          header?.classList.add('active');
-          steps?.classList.add('visible');
-          levels?.classList.add('visible');
-        } else {
-          header?.classList.remove('active');
-          steps?.classList.remove('visible');
-          levels?.classList.remove('visible');
-        }
+        const show_chrome = self.progress >= 1;
+        toggleFlag(header, 'active', show_chrome);
+        toggleFlag(steps, 'visible', show_chrome);
+        toggleFlag(levels, 'visible', show_chrome);
       },
     },
   });
@@ -197,6 +190,11 @@ function initScene1Animation() {
       if (levelAnimation) {
         levelAnimation.updateProgress(progress);
       }
+
+      toggleFlag(scene1Svg, 'svg-active', progress >= 0.4 && progress <= 0.8);
+      if (scene1CloudsBack) {
+        scene1CloudsBack.style.opacity = String(Math.max(0, 1 - progress * 1.5));
+      }
     },
   });
 
@@ -221,31 +219,6 @@ function initScene1Animation() {
     },
   });
 
-  gsap.to(container.querySelector('.scene-1 .main-layer'), {
-    ease: 'none',
-    force3D: true,
-    scrollTrigger: {
-      trigger: container.querySelector('.scene-1'),
-      start: `top bottom`,
-      end: 'bottom top',
-      scrub: true,
-      onUpdate: (self) => {
-        const progress = self.progress;
-
-        if (progress >= 0.4 && progress <= 0.8) {
-          scene1Svg?.classList.add('svg-active');
-        } else {
-          scene1Svg?.classList.remove('svg-active');
-        }
-        if (scene1CloudsBack) {
-          gsap.to(scene1CloudsBack, {
-            opacity: 1 - progress * 1.5,
-            ease: 'none',
-          });
-        }
-      },
-    },
-  });
 }
 
 function initSceneTransition() {
@@ -300,6 +273,7 @@ function initScene2Animation() {
           levelAnimation.updateProgress(progress);
         }
       }
+      toggleFlag(scene2Svg, 'svg-active', progress >= 0.1 && progress <= 0.85);
     },
   });
 
@@ -315,24 +289,6 @@ function initScene2Animation() {
     },
   });
 
-  gsap.to(container.querySelector('.scene-2 .main-layer'), {
-    ease: 'none',
-    scrollTrigger: {
-      trigger: container.querySelector('.scene-2'),
-      start: `top bottom`,
-      end: 'bottom top',
-      scrub: true,
-      onUpdate: (self) => {
-        const progress = self.progress;
-
-        if (progress >= 0.1 && progress <= 0.85) {
-          scene2Svg?.classList.add('svg-active');
-        } else {
-          scene2Svg?.classList.remove('svg-active');
-        }
-      },
-    },
-  });
 }
 
 function initScene3Animation() {
@@ -370,34 +326,23 @@ function initScene3Animation() {
     },
   });
 
+  ScrollTrigger.create({
+    trigger: container.querySelector('.scene-3'),
+    start: 'top bottom',
+    end: 'bottom bottom',
+    onUpdate: (self) => {
+      toggleFlag(scene3Svg, 'svg-active', self.progress >= 0.3 && self.progress <= 0.98);
+    },
+  });
+
   gsap.to(container.querySelector('.scene-3 .islands-back-2'), {
     y: `-65%`,
     ease: 'none',
-    force3D: true,
     scrollTrigger: {
       trigger: container.querySelector('.scene-3'),
       start: `top bottom`,
       end: `bottom bottom-=${300 * VH}`,
       scrub: true,
-    },
-  });
-
-  gsap.to(container.querySelector('.scene-3 .main-layer'), {
-    ease: 'none',
-    force3D: true,
-    scrollTrigger: {
-      trigger: container.querySelector('.scene-3'),
-      start: `top bottom`,
-      end: 'bottom bottom',
-      scrub: true,
-      onUpdate: (self) => {
-        const progress = self.progress;
-        if (progress >= 0.3 && progress <= 0.98) {
-          scene3Svg?.classList.add('svg-active');
-        } else {
-          scene3Svg?.classList.remove('svg-active');
-        }
-      },
     },
   });
 }
@@ -434,46 +379,30 @@ function initScene4Animation() {
       if (levelAnimation) {
         levelAnimation.updateProgress(progress);
       }
-      if (progress >= 0.9 && header) {
-        header.classList.remove('active');
-        steps.classList.remove('visible');
-        levels.classList.remove('visible');
-      } else {
-        header.classList.add('active');
-        steps.classList.add('visible');
-        levels.classList.add('visible');
-      }
+      const show_chrome = progress < 0.9;
+      toggleFlag(header, 'active', show_chrome);
+      toggleFlag(steps, 'visible', show_chrome);
+      toggleFlag(levels, 'visible', show_chrome);
+    },
+  });
+
+  ScrollTrigger.create({
+    trigger: container.querySelector('.scene-4'),
+    start: 'top bottom',
+    end: 'bottom bottom',
+    onUpdate: (self) => {
+      toggleFlag(scene4Svg, 'svg-active', self.progress >= 0.4 && self.progress <= 1);
     },
   });
 
   gsap.to(container.querySelector('.scene-4 .islands-back-2'), {
     y: `-100%`,
     ease: 'none',
-    force3D: true,
     scrollTrigger: {
       trigger: container.querySelector('.scene-4'),
       start: `top bottom`,
       end: `bottom bottom`,
       scrub: true,
-    },
-  });
-
-  gsap.to(container.querySelector('.scene-4 .main-layer'), {
-    ease: 'none',
-    force3D: true,
-    scrollTrigger: {
-      trigger: container.querySelector('.scene-4'),
-      start: `top bottom`,
-      end: 'bottom bottom',
-      scrub: true,
-      onUpdate: (self) => {
-        const progress = self.progress;
-        if (progress >= 0.4 && progress <= 1) {
-          scene4Svg?.classList.add('svg-active');
-        } else {
-          scene4Svg?.classList.remove('svg-active');
-        }
-      },
     },
   });
 }

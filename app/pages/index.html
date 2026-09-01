@@ -101,6 +101,7 @@
     </div>
   </div>
   <main>
+    <template id="landing-desktop">
     <div class="main-container desktop">
       <section class="scene hero-scene">
         <div class="hero">
@@ -276,10 +277,10 @@
 
       <section class="scene scene-transition">
         <div class="parallax-layer clouds-back">
-          <img src="../images/scene_transition/clouds_back.avif" alt="" loading="eager" fetchpriority="high">
+          <img src="../images/scene_transition/clouds_back.avif" alt="" loading="lazy">
         </div>
         <div class="parallax-layer clouds-front">
-          <img src="../images/scene_transition/clouds_front.avif" alt="" loading="eager" fetchpriority="high">
+          <img src="../images/scene_transition/clouds_front.avif" alt="" loading="lazy">
         </div>
       </section>
 
@@ -295,10 +296,10 @@
           <img src="../images/scene_2/bg-island-3rd-plan.avif" alt="">
         </div>
         <div class="main-layer">
-          <img src="../images/scene_2/test-part-1.avif" alt="" loading="eager" fetchpriority="high">
-          <img src="../images/scene_2/test-part-2.avif" alt="" loading="eager">
-          <img src="../images/scene_2/test-part-3.avif" alt="" loading="eager">
-          <img src="../images/scene_2/test-part-4.avif" alt="" loading="eager">
+          <img src="../images/scene_2/test-part-1.avif" alt="" loading="lazy">
+          <img src="../images/scene_2/test-part-2.avif" alt="" loading="lazy">
+          <img src="../images/scene_2/test-part-3.avif" alt="" loading="lazy">
+          <img src="../images/scene_2/test-part-4.avif" alt="" loading="lazy">
           <div class="scene-svg">
             <svg viewBox="0 0 1440 1517" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="char-item" data-target-id="1"
@@ -654,10 +655,10 @@
           </div>
         </div>
         <div class="main-layer">
-          <img src="../images/scene_3/test-part-1.avif" alt="" loading="eager" fetchpriority="high">
-          <img src="../images/scene_3/test-part-2.avif" alt="" loading="eager">
-          <img src="../images/scene_3/test-part-3.avif" alt="" loading="eager">
-          <img src="../images/scene_3/test-part-4.avif" alt="" loading="eager">
+          <img src="../images/scene_3/test-part-1.avif" alt="" loading="lazy">
+          <img src="../images/scene_3/test-part-2.avif" alt="" loading="lazy">
+          <img src="../images/scene_3/test-part-3.avif" alt="" loading="lazy">
+          <img src="../images/scene_3/test-part-4.avif" alt="" loading="lazy">
           <div class="scene-svg">
             <svg viewBox="0 0 1440 1736" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="char-item" data-target-id="1"
@@ -1003,10 +1004,10 @@
           </div>
         </div>
         <div class="main-layer">
-          <img src="../images/scene_4/test-part-1.avif" alt="" loading="eager" fetchpriority="high">
-          <img src="../images/scene_4/test-part-2.avif" alt="" loading="eager">
-          <img src="../images/scene_4/test-part-3.avif" alt="" loading="eager">
-          <img src="../images/scene_4/test-part-4.avif" alt="" loading="eager">
+          <img src="../images/scene_4/test-part-1.avif" alt="" loading="lazy">
+          <img src="../images/scene_4/test-part-2.avif" alt="" loading="lazy">
+          <img src="../images/scene_4/test-part-3.avif" alt="" loading="lazy">
+          <img src="../images/scene_4/test-part-4.avif" alt="" loading="lazy">
           <div class="scene-svg">
             <svg viewBox="0 0 1440 1066" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="char-item" data-target-id="1"
@@ -1219,7 +1220,9 @@
         </div>
       </section>
     </div>
+    </template>
 
+    <template id="landing-mobile">
     <div class="main-container mobile">
       <section class="scene hero-scene">
         <div class="hero">
@@ -1983,6 +1986,19 @@
         </div>
       </section>
     </div>
+    </template>
+    <script>
+      (function () {
+        var is_mobile = window.innerWidth < 768;
+        var tpl = document.getElementById(is_mobile ? 'landing-mobile' : 'landing-desktop');
+        if (tpl) {
+          tpl.parentNode.insertBefore(tpl.content, tpl);
+        }
+        var unused = document.getElementById(is_mobile ? 'landing-desktop' : 'landing-mobile');
+        if (unused) unused.remove();
+        if (tpl) tpl.remove();
+      })();
+    </script>
   </main>
 
   <!-- =include footer.html -->

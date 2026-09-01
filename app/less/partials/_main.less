@@ -453,7 +453,6 @@ h1,
     height: max-content;
     border-radius: 0.5rem;
     background: rgba(30, 31, 33, 0.6);
-    backdrop-filter: blur(1.25rem);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -477,6 +476,7 @@ h1,
     visibility: visible;
     pointer-events: all;
     transform: translateY(0);
+    backdrop-filter: blur(8px);
 }
 
 .icon {
@@ -602,14 +602,10 @@ h1,
     flex-direction: column;
     position: relative;
     z-index: 6;
-    will-change: transform;
-    transform: translateZ(0); // Force GPU acceleration
-    contain: layout style paint; // Isolate rendering
-    margin-bottom: -2px; // Fix gap issue at the bottom
+    contain: layout style paint;
+    margin-bottom: -2px;
 
     img {
-        will-change: transform;
-        transform: translateZ(0);
         position: relative;
 
         &:nth-child(1) {
@@ -644,6 +640,10 @@ h1,
         cursor: default;
         opacity: 1;
         visibility: visible;
+
+        .char-item {
+            animation: 1s charAnimation alternate infinite;
+        }
     }
 
     svg {
@@ -652,11 +652,9 @@ h1,
 
     .char-item {
         fill: rgba(#FFAA00, 0);
-        will-change: fill;
         position: relative;
         z-index: 8;
-        animation: 1s charAnimation alternate infinite;
-        transition: all 0.3s ease;
+        transition: opacity 0.3s ease;
         opacity: 0;
 
         &.show-outline {
@@ -710,8 +708,7 @@ h1,
         width: 23.75rem;
         height: max-content;
         border-radius: 0.5rem;
-        background: rgba(30, 31, 33, 0.6);
-        backdrop-filter: blur(1.25rem);
+        background: rgba(30, 31, 33, 0.85);
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
@@ -833,8 +830,6 @@ img {
 }
 
 img {
-    will-change: transform;
-    transform: translateZ(0);
     position: relative;
 
     &:nth-child(1) {
@@ -1477,7 +1472,6 @@ img {
     gap: 0.5rem;
     position: relative;
     z-index: 6;
-    will-change: transform;
 
     .tablet-down({
         grid-template-columns: repeat(2, 1fr);
