@@ -8,8 +8,6 @@ const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer').default;
 const clean = require('gulp-clean');
 const avif = require('gulp-avif');
-const webp = require('gulp-webp');
-const imagemin = require('gulp-imagemin');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const include = require('gulp-include');
 const newer = require('gulp-newer');
@@ -88,19 +86,12 @@ function images() {
     .pipe(avif({ quality: 70, effort: 6 }))
     .pipe(dest(appPath + '/images'));
 
-  // (необов'язково) WEBP
-  // const toWebp = src(rasterGlob, { base: path.imagesSrc })
-  //   .pipe(newer({ dest: appPath + '/images', ext: '.webp' }))
-  //   .pipe(webp())
-  //   .pipe(dest(appPath + '/images'));
-
   // SVG — просто копіюємо або оптимізуємо
   const svgs = src(svgGlob, { base: path.imagesSrc })
     .pipe(newer(appPath + '/images'))
-    // .pipe(imagemin([imagemin.svgo()]))
     .pipe(dest(appPath + '/images'));
 
-  return merge(toAvif, /* toWebp, */ svgs);
+  return merge(toAvif, svgs);
 }
 
 function videos() {
