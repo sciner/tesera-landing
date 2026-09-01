@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page-loading">
 
 <head>
 	<meta charset="UTF-8">
@@ -26,7 +26,8 @@
 	<link rel="preload" href="../images/legal-bg.webp" as="image" type="image/webp">
 </head>
 
-<body class="legal-info text-page">
+<body class="legal-info text-page page-loading">
+	<!-- =include page-loader.html -->
 	<!-- =include cookie-popup.html -->
 	<!-- =include header.html -->
 	<img src="../images/legal-bg.webp" alt="background" class="fixed-bg" aria-hidden="true" />
@@ -76,6 +77,7 @@
 	</main>
 	<!-- =include footer.html -->
 
+	<script src="js/page-loader.min.js" defer></script>
 	<script src="js/libs.min.js" defer></script>
 	<script src="js/common.min.js" defer></script>
 

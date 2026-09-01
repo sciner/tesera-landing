@@ -452,13 +452,14 @@ h1,
     width: 23.75rem;
     height: max-content;
     border-radius: 0.5rem;
-    background: rgba(30, 31, 33, 0.6);
+    background: rgba(9, 24, 34, 0.72);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transform: translateY(2rem);
     transition: all 0.5s;
     z-index: 10000;
+    .hud-glow();
 
     .tablet-up({
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 1.5rem 100%, 1.5rem 5.75rem, 0% 4.25rem);
@@ -511,8 +512,8 @@ h1,
     font-weight: 700;
     font-size: 1.25rem;
     line-height: 140%;
-    color: #fff;
     margin: 0 0 0.25rem 0;
+    .hud-title();
 }
 
 .text {
@@ -709,12 +710,13 @@ h1,
         width: 23.75rem;
         height: max-content;
         border-radius: 0.5rem;
-        background: rgba(30, 31, 33, 0.85);
+        background: rgba(9, 24, 34, 0.85);
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
         transition: all .5s;
         z-index: 10000;
+        .hud-glow();
 
         .tablet-up({
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 1.5rem 100%, 1.5rem var(--clip-y1, 8.75rem), 0% var(--clip-y2, 11.25rem));
@@ -747,10 +749,10 @@ h1,
 
 .t1 {
     margin-bottom: 0.25rem;
-    color: #fff;
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.75rem;
+    .hud-title();
 }
 
 .tier {
@@ -1622,11 +1624,11 @@ img {
     width: calc(100dvw - 2rem);
     height: max-content;
     border-radius: 0.5rem;
-    background: rgba(30, 31, 33, 0.85);
     opacity: 0;
     visibility: hidden;
     pointer-events: all;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    .hud-panel();
 
     &.visible {
         opacity: 1;
@@ -1639,10 +1641,10 @@ img {
 
     .t1 {
         margin-bottom: 0.25rem;
-        color: #fff;
         font-size: 1.25rem;
         font-weight: 700;
         line-height: 1.75rem;
+        .hud-title();
     }
 
     .t2 {

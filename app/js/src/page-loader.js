@@ -36,13 +36,15 @@ class PageLoader {
   }
 
   unlockScroll() {
-    window.scrollTo(0, 0)
     document.documentElement.classList.remove('page-loading')
     document.body.classList.remove('page-loading')
     this.keepAtTop()
   }
 
   keepAtTop() {
+    // при переходе по якорю (#stage) позицию не трогаем, ей управляет hash-навигация
+    if (window.location.hash) return
+
     window.scrollTo(0, 0)
     requestAnimationFrame(() => {
       window.scrollTo(0, 0)

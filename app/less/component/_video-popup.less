@@ -38,13 +38,13 @@
 .video-popup-dialog {
 	position: relative;
 	width: min(72rem, 100%);
-	background: #101114;
 	border-radius: 0.75rem;
 	overflow: hidden;
 	transform: translateY(1.25rem) scale(0.96);
 	opacity: 0;
 	transition: transform 0.4s ease, opacity 0.4s ease;
-	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.45);
+	.hud-panel();
+	box-shadow: 0 0 1rem rgba(48, 180, 205, 0.28), inset 0 0 1.5rem rgba(48, 180, 205, 0.1), 0 1.5rem 4rem rgba(0, 0, 0, 0.45);
 }
 
 .video-popup-frame {
@@ -70,11 +70,11 @@
 	width: 2.5rem;
 	height: 2.5rem;
 	padding: 0;
-	border: 0;
+	border: 0.0625rem solid rgba(91, 214, 232, 0.6);
 	border-radius: 0.5rem;
-	background: rgba(30, 31, 33, 0.82);
+	background: rgba(9, 24, 34, 0.85);
 	cursor: pointer;
-	transition: background-color 0.3s;
+	transition: background-color 0.3s, box-shadow 0.3s;
 
 	&::before,
 	&::after {
@@ -84,7 +84,8 @@
 		left: 50%;
 		width: 1rem;
 		height: 0.125rem;
-		background: #fff;
+		background: #5bd6e8;
+		transition: background-color 0.3s;
 	}
 
 	&::before {
@@ -96,6 +97,12 @@
 	}
 
 	&:hover {
-		background: #fa0;
+		background: rgba(91, 214, 232, 0.9);
+		box-shadow: 0 0 0.75rem rgba(91, 214, 232, 0.6);
+
+		&::before,
+		&::after {
+			background: #081822;
+		}
 	}
 }

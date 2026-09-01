@@ -83,3 +83,22 @@
     @rules();
   }
 }
+
+// Панель в стиле внутриигрового HUD: тёмная подложка + светящаяся циановая рамка
+.hud-panel() {
+  background: rgba(9, 24, 34, 0.85);
+  border: 0.0625rem solid rgba(91, 214, 232, 0.45);
+  box-shadow: 0 0 1rem rgba(48, 180, 205, 0.28), inset 0 0 1.5rem rgba(48, 180, 205, 0.1);
+}
+
+// Свечение для панелей с clip-path: обычный box-shadow там обрезается формой,
+// а drop-shadow повторяет контур выреза
+.hud-glow() {
+  filter: drop-shadow(0 0 0.4rem rgba(91, 214, 232, 0.35));
+}
+
+.hud-title() {
+  color: #5bd6e8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
