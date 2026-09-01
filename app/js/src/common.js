@@ -500,6 +500,9 @@ document.addEventListener('DOMContentLoaded', () => {
     () => {
       requestAnimationFrame(() => {
         ScrollTrigger.refresh();
+        if (!window.location.hash) {
+          window.scrollTo(0, 0);
+        }
       });
 
       const is_low_end =
