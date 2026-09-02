@@ -95,9 +95,6 @@ const handleResize = debounce(() => {
   REM = parseFloat(getComputedStyle(document.documentElement).fontSize);
   refreshLevelLabels();
   ScrollTrigger.refresh();
-  if (typeof updateClipPath === 'function') {
-    updateClipPath();
-  }
 }, 250);
 
 function lazyLoadVideos() {

@@ -1,19 +1,6 @@
 // Desktop-specific JavaScript (screens >= 768px)
 const container = document.querySelector('.main-container.desktop');
 
-function updateClipPath() {
-  // Срез под иконкой идёт строго под 45° (перепад равен ширине врезки 1.5rem),
-  // параллельно нижней грани ромба, с тем же зазором (1.25rem), что у верхнего скоса.
-  // y2 равен размеру углового среза (2.625rem) — обе линии сходятся в острую вершину
-  // на высоте боковой вершины ромба. Пересчёт в px — вёрстка масштабируется от vw.
-  const y1 = 4.125 * REM;
-  const y2 = 2.625 * REM;
-  container.querySelectorAll('.popup').forEach((popup) => {
-    popup.style.setProperty('--clip-y1', `${y1}px`);
-    popup.style.setProperty('--clip-y2', `${y2}px`);
-  });
-}
-
 function initSvgHoverInfo() {
   // Store scene/target pairs for active popups
   const activePopups = new Map();
@@ -404,7 +391,6 @@ function initScene4Animation() {
 
 // ===== Ініціалізація =====
 function initDesktop() {
-  updateClipPath();
   initSvgHoverInfo();
   initHeroAnimation();
   initScene1Animation();

@@ -709,6 +709,8 @@ h1,
         gap: 1rem;
         width: 23.75rem;
         height: max-content;
+        // не короче иконки с её отступами (1.25 + 2.75 + 1.25)
+        min-height: 5.25rem;
         border-radius: 0.5rem;
         background: rgba(9, 24, 34, 0.75);
         backdrop-filter: blur(0.25rem);
@@ -720,7 +722,8 @@ h1,
         .hud-glow();
 
         .tablet-up({
-            clip-path: polygon(2.625rem 0%, 100% 0%, 100% 100%, 1.5rem 100%, 1.5rem var(--clip-y1, 4.125rem), 0% var(--clip-y2, 2.625rem));
+            // срез под 45° сразу под иконкой: остриё на 2.625rem — уровень боковой вершины ромба
+            clip-path: polygon(2.625rem 0%, 100% 0%, 100% 100%, 1.5rem 100%, 1.5rem 4.125rem, 0% 2.625rem);
         });
 
     .tablet-down({
@@ -744,8 +747,19 @@ h1,
     top: -1.25rem;
     right: -1.25rem;
     transform: translateX(calc(-100% + 5.25rem));
-    clip-path: polygon(0% 0%, calc(100% - 2.625rem) 0%, 100% var(--clip-y2, 2.625rem), calc(100% - 1.5rem) var(--clip-y1, 4.125rem), calc(100% - 1.5rem) 100%, 0% 100%);
+    clip-path: polygon(0% 0%, calc(100% - 2.625rem) 0%, 100% 2.625rem, calc(100% - 1.5rem) 4.125rem, calc(100% - 1.5rem) 100%, 0% 100%);
 
+    .icon {
+        left: auto;
+        right: 1.25rem;
+    }
+
+    .content {
+        .tablet-up({
+            margin-left: 0;
+            margin-right: 3.75rem;
+        });
+    }
 }
 
 .t1 {
@@ -772,7 +786,12 @@ h1,
 }
 
 .icon {
-    flex-shrink: 0;
+    // Иконка прибита к координатам панели, а не к флоу контента:
+    // срез в clip-path задан в тех же координатах, поэтому ромб всегда
+    // сидит на острие одинаково во всех попапах
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
     width: 2.75rem;
     height: 2.75rem;
 
@@ -782,8 +801,16 @@ h1,
 
 img {
     width: 100%;
+    display: block;
 }
 
+}
+
+.content {
+    .tablet-up({
+        // отступ под абсолютную иконку: 2.75rem ромб + 1rem зазор
+        margin-left: 3.75rem;
+    });
 }
 }
 }
@@ -1039,7 +1066,9 @@ img {
     background: #040404;
 
     .tablet-up({
-        .main-layer img {
+        // пропорция только для фоновой картинки слоя: селектор без `>`
+        // растягивал и ромбы-иконки внутри попапов .scene-svg
+        .main-layer > img {
             aspect-ratio: 2160 / 3840;
         }
     });
@@ -1181,7 +1210,9 @@ img {
     background: #040404;
 
     .tablet-up({
-        .main-layer img {
+        // пропорция только для фоновой картинки слоя: селектор без `>`
+        // растягивал и ромбы-иконки внутри попапов .scene-svg
+        .main-layer > img {
             aspect-ratio: 2160 / 3840;
         }
     });
